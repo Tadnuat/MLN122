@@ -1,0 +1,2734 @@
+
+  (function initColor() {
+    const themeColors = ["#E8F7FF","#B8CFDC","#8EA8B9","#688296","#485F73","#2C3E50","#23384F","#1A314F","#11294E","#08224D","#001A4D"];
+    const themeIncrements = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950];
+
+    themeColors.forEach((color, index) => {
+      const propName = `--ai-create-color-theme-${themeIncrements[index]}`;
+      document.documentElement.style.setProperty(propName, color);
+    });
+
+    const supportColors = ["#E8FAFF","#C0E9F8","#9AD7F1","#76C3E9","#54AEE2","#3498DB","#247CBF","#1761A2","#0D4985","#053469","#00214D"];
+    supportColors.forEach((color, index) => {
+      const propName = `--ai-create-color-support-${themeIncrements[index]}`;
+      document.documentElement.style.setProperty(propName, color);
+    });
+
+    const highlightColors = ["#FFF7E8","#FAE2BD","#F5CB94","#F0B36D","#EB9947","#E67E22","#C76418","#A94C0F","#8A3808","#6B2603","#4D1700"];
+    highlightColors.forEach((color, index) => {
+      const propName = `--ai-create-color-highlight-${themeIncrements[index]}`;
+      document.documentElement.style.setProperty(propName, color);
+    });
+
+  })();
+  
+  (function initFont() {
+    [
+      { name: 'Raleway', key: '--custom-heading-font', fontFamily: 'Raleway,ui-sans-serif, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' },
+      { name: 'Roboto', key: '--custom-body-font', fontFamily: 'Roboto,ui-sans-serif, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' },
+    ]
+      .forEach(({ name, key, fontFamily }) => {
+        if (name && name !== "undefined") {
+          const font = new FontFace(name, `url("/static/font/${name}.ttf")`);
+          document.fonts.add(font);
+          font.load();
+          document.documentElement.style.setProperty(key, fontFamily);
+        }
+      });
+  })();
+  async function render() {
+  window.siteRoutes = [{
+    "name": "Trang chủ",
+    "path": "home",
+    "title": "Trang chủ",
+    "isHomePage": true,
+    "pageId": "1984163421623988226",
+    "sections": ["jvsNoqwOZDTL8WsaC1E5V", "K_4Tizgj5v8G1J68QqM-p", "10LyIYJh977MwFUGbFMwV", "kEeauZ7arjWeaB3vavvjE"],
+    "footerId": "7cPq0p2KtdM8onth8_z_I"
+  }, {
+    "name": "Tài liệu học tập",
+    "path": "study-materials",
+    "title": "Tài liệu học tập",
+    "isHomePage": false,
+    "pageId": "1984163432843751426",
+    "sections": ["XiACHS24PhZ_uJw91Dq69", "-aL3bhnofhju9YBlOUMcF", "uDYp6l9hsavtpMpGiVPoN", "mP7KWHn7M9L54WnLAg4Zx"],
+    "footerId": "7cPq0p2KtdM8onth8_z_I"
+  }];
+  window.attachments = [];
+  window.turi = {
+    "botStatus": 0
+  };
+  window.currentThreadId = "1984162465388769282";
+  window.siteTitle = "Lý luận Mác-Lênin và kinh tế xã hội";
+  window.currentSite = {
+    "id": "1984163286978441218",
+    "assistantThreadId": "1984162465388769282",
+    "subDomain": "lyluan-mac-lenin",
+    "title": "Lý luận Mác-Lênin và kinh tế xã hội",
+    "logo": "https://cdn.wegic.ai/assets/onepage/thread/icon/1761896388262.png",
+    "favicon": "https://cdn.wegic.ai/assets/onepage/thread/icon/default.png",
+    "thumbnail": "1761898536670.png",
+    "description": "Website cung cấp tài liệu học tập, bài viết chuyên sâu và phân tích các vấn đề kinh tế - xã hội thực tế.",
+    "removeBadge": 0,
+    "status": 3,
+    "publishRemainingTime": 604093716,
+    "autoPub": 0,
+    "webInfo": {
+      "subDomain": "lyluan-mac-lenin",
+      "siteTitle": "Lý luận Mác-Lênin và kinh tế xã hội",
+      "siteType": "Education",
+      "siteDescription": "Website cung cấp tài liệu học tập, bài viết chuyên sâu và phân tích các vấn đề kinh tế - xã hội thực tế.",
+      "designStyle": ["Professional", "Educational", "Minimalist"],
+      "languageStyle": ["Formal", "Informative", "Engaging"],
+      "imageStylePreference": ["Illustrative", "Academic", "Modern"],
+      "language": "Vietnamese",
+      "styleGuide": "{\"colors\":{\"primary\":\"#2C3E50\",\"support\":\"#3498DB\",\"highlight\":\"#E67E22\",\"surface\":\"#7F8C8D\",\"borders\":\"#BDC3C7\",\"input\":\"#ECF0F1\",\"background\":{\"light\":\"#FFFFFF\",\"dark\":\"#2C3E50\"}},\"fontFamily\":{\"headline\":\"Raleway\",\"body\":\"Roboto\"},\"boxShadow\":{\"default\":\"0 4px 6px rgba(0, 0, 0, 0.1)\",\"small\":\"0 2px 4px rgba(0, 0, 0, 0.05)\",\"large\":\"0 8px 12px rgba(0, 0, 0, 0.15)\"},\"radius\":\"16\",\"fontSize\":\"16px\",\"icon\":{\"name\":\"FontAwesome\",\"style\":\"Solid\"},\"extend\":{\"buttons\":[\"BoldContrastLaunchIconAndTextButton\",\"IconAndTextLightBorderedButton\",\"LightGrayFilledButton\"],\"primaryHeadline\":[{\"name\":\"LargeAndBoldBlackText\",\"description\":\"Bold, black - colored text with a large font size, making it highly prominent\"}],\"secondaryHeadline\":\"MediumAndBoldBlackText\",\"primaryDESC\":[{\"name\":\"RegularDescription\",\"description\":\"Regular black descriptive text with a mix of upper - and lower - case letters, suitable for use within any descriptive paragraphs\"}],\"secondaryDESC\":\"RegularDescription\",\"titleBadge\":\"TagTitleBadge\"}}",
+      "themeColor": "#2C3E50",
+      "themeFont": {
+        "headers": "Raleway",
+        "bodyText": "Roboto"
+      },
+      "iconLibrary": {
+        "name": "FontAwesome",
+        "style": "Regular"
+      },
+      "keywords": ["Lý luận Mác-Lênin", "Kinh tế xã hội", "Học tập", "Phân tích", "Tài liệu"],
+      "imageFeature": {
+        "imageStyle": "academic visual arts, sophisticated lighting, structured composition, clean illustrative style, with balanced color contrasts and professional finishing.",
+        "imageStyleScore": [8, 8, 9, 5, 6, 7, 7, 4, 5, 4, 2],
+        "imageKeywords": "学术设计,现代教育,插图"
+      },
+      "currency": "VND"
+    },
+    "domain": "wegic.app",
+    "customDomainRoot": false,
+    "domainType": "FREE",
+    "createDate": "2025-10-31T07:39:26.000+00:00",
+    "updateDate": "2025-10-31T08:18:38.000+00:00",
+    "notify": 1,
+    "email": "dodat1382016@gmail.com",
+    "currency": "USD",
+    "publishCurrency": "USD",
+    "customCode": "",
+    "googleSEOCode": "",
+    "bingSEOCode": "",
+    "pinterestSEOCode": "",
+    "yandexSEOCode": "",
+    "naverSEOCode": "",
+    "jsFile": "1761898643590.js",
+    "publishDate": "2025-10-31T08:15:38.000+00:00",
+    "FCPImageList": "{\"home\":[\"https://cdn.wegic.ai/wegic-asset-store/data/image/V7RQUT0YK50O5WUY/origin?format=webp\",\"https://cdn.wegic.ai/assets/img/sticker/mood-star-modern-light.png?format=webp\",\"https://cdn.wegic.ai/assets/onepage/ai/image/e1cd2a08-0035-4755-9aa7-8fced4b6ef54.jpg?oldPrompt=A+modern+university+classroom+filled+with+students+of+different+age+groups%2C+all+studying+together+in+a+collaborative+environment%2C+with+books%2C+laptops%2C+and+a+whiteboard+visible%2C+professional+natural+daylight+photography+using+a+full-frame+DSLR+camera%2C+vibrant+colors+and+sharp+details&id=3555d7f2-a49d-4280-b31f-358a7ce24dd6&format=webp\",\"https://cdn.wegic.ai/assets/onepage/ai/image/9029b8ec-71ac-4d4c-a5d6-2e9987c5b216.jpg?oldPrompt=A+portrait+of+a+young+student%2C+with+short+black+hair+and+wearing+a+casual+shirt%2C+smiling+confidently%2C+photographed+against+a+blurred+academic+background%2C+professional+DSLR+photography%2C+sharp+details+and+realistic+colors&id=4f718861-eddc-4d0c-887c-ee1b469be0e3&format=webp\",\"https://cdn.wegic.ai/assets/onepage/ai/image/85c3768f-754c-403e-aaff-481491330bb0.jpg?oldPrompt=A+professional+portrait+of+a+young+female+student+with+long+brown+hair%2C+wearing+a+formal+outfit%2C+smiling+softly+and+looking+straight+at+the+camera%2C+set+against+a+blurred+background+of+bookshelves%2C+highly+detailed%2C+vibrant+colors%2C+and+eye-level+composition&id=05accc83-22ed-4b14-b73c-3e6ea055b53f&format=webp\",\"https://cdn.wegic.ai/assets/onepage/ai/image/71071da8-b63c-425a-89dd-71df911bcae7.jpg?oldPrompt=A+student+with+a+curly+hairstyle+and+a+bright+smile%2C+wearing+a+casual+hoodie%2C+standing+outdoors+with+greenery+in+the+background%2C+soft+natural+lighting%2C+clear+facial+details+captured+with+professional+DSLR+photography&id=e14ab472-d727-4fbd-99ad-b30dc4e0e781&format=webp\",\"https://cdn.wegic.ai/assets/onepage/ai/image/4cf48254-0964-48a7-a07d-f31cf59abaa7.jpg?oldPrompt=A+portrait+of+a+serious-looking+young+male+student+wearing+glasses+and+a+clean+formal+shirt%2C+photographed+against+a+smooth+gradient+backdrop%2C+deep+focus+and+vibrant+colors%2C+eye-level+composition+with+a+full-frame+DSLR+camera&id=a13d8462-51df-4aea-b1bc-cb4392f2fd6d&format=webp\",\"https://cdn.wegic.ai/assets/onepage/ai/image/891930e3-28f0-48e3-8cbf-eec648156856.jpg?oldPrompt=A+cheerful+female+student+wearing+traditional+Vietnamese+%C3%A1o+d%C3%A0i%2C+standing+in+a+library+while+holding+a+textbook%2C+surrounded+by+bookshelves%2C+natural+daylight+lighting%2C+detailed+texture+and+colors&id=04918682-31aa-4560-8adf-64b2ba4f506e&format=webp\",\"https://cdn.wegic.ai/assets/onepage/ai/image/b7b8ae68-19ba-42b9-894a-451d5fedb7e4.jpg?oldPrompt=A+young+male+student+with+short+black+hair+and+a+confident+expression%2C+wearing+a+casual+T-shirt%2C+leaning+against+a+school+hallway+wall%2C+softly+blurred+classroom+background%2C+sharp+subject+details%2C+vibrant+colors%2C+and+realistic+tones&id=88362c1a-ff21-47d3-95e1-cd44bc46df19&format=webp\"],\"/\":[\"https://cdn.wegic.ai/wegic-asset-store/data/image/V7RQUT0YK50O5WUY/origin?format=webp\",\"https://cdn.wegic.ai/assets/img/sticker/mood-star-modern-light.png?format=webp\",\"https://cdn.wegic.ai/assets/onepage/ai/image/e1cd2a08-0035-4755-9aa7-8fced4b6ef54.jpg?oldPrompt=A+modern+university+classroom+filled+with+students+of+different+age+groups%2C+all+studying+together+in+a+collaborative+environment%2C+with+books%2C+laptops%2C+and+a+whiteboard+visible%2C+professional+natural+daylight+photography+using+a+full-frame+DSLR+camera%2C+vibrant+colors+and+sharp+details&id=3555d7f2-a49d-4280-b31f-358a7ce24dd6&format=webp\",\"https://cdn.wegic.ai/assets/onepage/ai/image/9029b8ec-71ac-4d4c-a5d6-2e9987c5b216.jpg?oldPrompt=A+portrait+of+a+young+student%2C+with+short+black+hair+and+wearing+a+casual+shirt%2C+smiling+confidently%2C+photographed+against+a+blurred+academic+background%2C+professional+DSLR+photography%2C+sharp+details+and+realistic+colors&id=4f718861-eddc-4d0c-887c-ee1b469be0e3&format=webp\",\"https://cdn.wegic.ai/assets/onepage/ai/image/85c3768f-754c-403e-aaff-481491330bb0.jpg?oldPrompt=A+professional+portrait+of+a+young+female+student+with+long+brown+hair%2C+wearing+a+formal+outfit%2C+smiling+softly+and+looking+straight+at+the+camera%2C+set+against+a+blurred+background+of+bookshelves%2C+highly+detailed%2C+vibrant+colors%2C+and+eye-level+composition&id=05accc83-22ed-4b14-b73c-3e6ea055b53f&format=webp\",\"https://cdn.wegic.ai/assets/onepage/ai/image/71071da8-b63c-425a-89dd-71df911bcae7.jpg?oldPrompt=A+student+with+a+curly+hairstyle+and+a+bright+smile%2C+wearing+a+casual+hoodie%2C+standing+outdoors+with+greenery+in+the+background%2C+soft+natural+lighting%2C+clear+facial+details+captured+with+professional+DSLR+photography&id=e14ab472-d727-4fbd-99ad-b30dc4e0e781&format=webp\",\"https://cdn.wegic.ai/assets/onepage/ai/image/4cf48254-0964-48a7-a07d-f31cf59abaa7.jpg?oldPrompt=A+portrait+of+a+serious-looking+young+male+student+wearing+glasses+and+a+clean+formal+shirt%2C+photographed+against+a+smooth+gradient+backdrop%2C+deep+focus+and+vibrant+colors%2C+eye-level+composition+with+a+full-frame+DSLR+camera&id=a13d8462-51df-4aea-b1bc-cb4392f2fd6d&format=webp\",\"https://cdn.wegic.ai/assets/onepage/ai/image/891930e3-28f0-48e3-8cbf-eec648156856.jpg?oldPrompt=A+cheerful+female+student+wearing+traditional+Vietnamese+%C3%A1o+d%C3%A0i%2C+standing+in+a+library+while+holding+a+textbook%2C+surrounded+by+bookshelves%2C+natural+daylight+lighting%2C+detailed+texture+and+colors&id=04918682-31aa-4560-8adf-64b2ba4f506e&format=webp\",\"https://cdn.wegic.ai/assets/onepage/ai/image/b7b8ae68-19ba-42b9-894a-451d5fedb7e4.jpg?oldPrompt=A+young+male+student+with+short+black+hair+and+a+confident+expression%2C+wearing+a+casual+T-shirt%2C+leaning+against+a+school+hallway+wall%2C+softly+blurred+classroom+background%2C+sharp+subject+details%2C+vibrant+colors%2C+and+realistic+tones&id=88362c1a-ff21-47d3-95e1-cd44bc46df19&format=webp\"],\"study-materials\":[\"https://cdn.wegic.ai/wegic-asset-store/data/image/50HY18NJFRYLJDW7/origin?format=webp\",\"https://cdn.wegic.ai/assets/onepage/ai/image/d36a4819-9b55-498b-b186-cf054a2c3f4f.jpg?oldPrompt=A+collection+of+educational+materials+spread+on+a+wooden+desk%2C+including+open+books%2C+notebooks%2C+and+research+papers%2C+captured+in+a+professional%2C+well-lit+indoor+environment%2C+with+a+scholarly+atmosphere%2C+representing+academic+study+and+research&id=9c9a49ba-4554-4c4c-82ff-52f8b4bbdb8f&format=webp\"]}"
+  };
+  const routerList = [];
+  const createRoot = await siteEngine.getPackage("createRoot");
+  const React = await siteEngine.getPackage("React");
+  const ErrorBoundary = await siteEngine.getPackage("ErrorBoundary");
+  const RouterWrap = await siteEngine.getPackage("RouterWrap");
+  const ReactRouterDom = await siteEngine.getPackage('ReactRouterDom');
+  const createBrowserRouter = ReactRouterDom.createBrowserRouter;
+  const RouterProvider = ReactRouterDom.RouterProvider;
+  const Navigate = ReactRouterDom.Navigate;
+  const AnimateInView = await siteEngine.getPackage('@Basic/AnimateInView');
+  const EditableImg = await siteEngine.getPackage('@Basic/EditableImg');
+  const EditableText = await siteEngine.getPackage('@Basic/EditableText');
+  const EditableButton = await siteEngine.getPackage('@Basic/EditableButton');
+  const EditablePayButton = await siteEngine.getPackage('@Basic/EditablePayButton');
+  const EditableIcon = await siteEngine.getPackage('@Basic/EditableIcon');
+  const EditableMedia = await siteEngine.getPackage('@Basic/EditableMedia');
+  const EditableEmbed = await siteEngine.getPackage('@Basic/EditableEmbed');
+  const EditableForm = await siteEngine.getPackage('@Basic/EditableForm');
+  const EmbedPopover = await siteEngine.getPackage('@Basic/EmbedPopover');
+  const EmbedSidetab = await siteEngine.getPackage('@Basic/EmbedSidetab');
+  const AIChatBox = await siteEngine.getPackage('@Basic/AIChatBox');
+  const ComponentSlot = await siteEngine.getPackage('@Basic/ComponentSlot');
+  const Overflow = await siteEngine.getPackage('@Basic/Overflow');
+  const {
+    debounce,
+    throttle
+  } = await siteEngine.getPackage('lodash-es');
+  const {
+    loadStripe
+  } = await siteEngine.getPackage('@stripe/stripe-js');
+  const {
+    EmbeddedCheckout,
+    EmbeddedCheckoutProvider
+  } = await siteEngine.getPackage('@stripe/react-stripe-js');
+  const Dialog = await siteEngine.getPackage('@radix-ui/react-dialog');
+  const ScrollAreaPrimitive = await siteEngine.getPackage('@radix-ui/react-scroll-area');
+  const Marquee = await siteEngine.getPackage('Marquee'); //跑马灯
+  const Carousel = await siteEngine.getPackage('Carousel'); //轮播图
+  const motion = await siteEngine.getPackage('motion');
+  const framerMotion = await siteEngine.getPackage('framerMotion');
+  const AnimatePresence = await siteEngine.getPackage('AnimatePresence');
+  const useMotionValue = await siteEngine.getPackage('useMotionValue');
+  const useTransform = await siteEngine.getPackage('useTransform');
+  const useSpring = await siteEngine.getPackage('useSpring');
+  const animate = await siteEngine.getPackage('animate');
+  const BuildSiteTip = await siteEngine.getPackage('@Basic/BuildSiteTip');
+  const SaveByTemplateTip = await siteEngine.getPackage('@Basic/SaveByTemplateTip');
+  let Navigation_1984162465388769282 = /*#__PURE__*/React.createElement(React.Fragment, null);
+  let Footer_1984162465388769282 = /*#__PURE__*/React.createElement(React.Fragment, null);
+  const defaultRouter = "home";
+  function Layout(props) {
+    return /*#__PURE__*/React.createElement(RouterWrap, null, true && false && /*#__PURE__*/React.createElement(BuildSiteTip, null), Navigation_1984162465388769282, props.children, Footer_1984162465388769282, /*#__PURE__*/React.createElement(EmbedPopover, null), /*#__PURE__*/React.createElement(EmbedSidetab, null), /*#__PURE__*/React.createElement(AIChatBox, null));
+  }
+  try {
+    function Navigation_02({
+      logo = 'https://cdn.wegic.ai/assets/onepage/thread/icon/default.png',
+      navItems = ['text=Home&link=/home', 'text=About&link=/about', 'text=Service&link=/service', 'text=Case&link=/case', 'text=Blog&link=/blog', 'text=Contact&link=/contact', 'text=Location&link=/location', 'text=Map&link=/map'],
+      primaryButton = {
+        icon: 'fa-solid fa-arrow-right',
+        textAttr: 'Contact us',
+        textColor: 'black'
+      },
+      secondaryButton,
+      fixedTop = true,
+      logoSize = 40,
+      showButton = true,
+      maxCount = 7
+    }) {
+      const NAV_GAP = React.useMemo(() => 64, []);
+      const LOGO_MAX_WIDTH = React.useMemo(() => 300, []);
+      const MOBILE_WIDTH = React.useMemo(() => 768, []);
+      const MIN_PAGE_WIDTH = React.useMemo(() => 300, []);
+      const viewportId = React.useMemo(() => {
+        var _window;
+        return ((_window = window) === null || _window === void 0 || (_window = _window.siteEngine) === null || _window === void 0 ? void 0 : _window.scrollContainerId) || 'preview-viewport';
+      }, []);
+      const [viewportHeight, setViewportHeight] = React.useState(0);
+      const [mobileMode, setMobileMode] = React.useState(false);
+      const moreButtonRef = React.useRef(null);
+      const [moreListVisible, setMoreListVisible] = React.useState(false);
+      const mobileListRef = React.useRef(null);
+      const [mobileListVisible, setMobileListVisible] = React.useState(false);
+      const [mobileEntryVisible, setMobileEntryVisible] = React.useState(false);
+      const buttonVisible = showButton && (secondaryButton || primaryButton);
+      const layoutObject = React.useMemo(() => {
+        const layout = {
+          logoSize: 0,
+          navHeight: 0,
+          buttonHeight: 0,
+          buttonPX: 0,
+          fontSize: 0,
+          dropDownHeight: 0,
+          dropDownPaddingLeft: 0,
+          dropDownPaddingRight: 0,
+          mobileNavHeight: 56,
+          mobileNavItemHeight: 56,
+          mobileFontSize: 14,
+          mobileIconSize: 20
+        };
+        if (logoSize < 48) {
+          layout.fontSize = 14;
+          layout.dropDownHeight = 48;
+          layout.dropDownPaddingLeft = 12;
+          layout.dropDownPaddingRight = 48;
+        } else if (logoSize >= 48 && logoSize < 64) {
+          layout.fontSize = 15;
+          layout.dropDownHeight = 64;
+          layout.dropDownPaddingLeft = 20;
+          layout.dropDownPaddingRight = 80;
+        } else if (logoSize >= 64) {
+          layout.fontSize = 16;
+          layout.dropDownHeight = 64;
+          layout.dropDownPaddingLeft = 20;
+          layout.dropDownPaddingRight = 80;
+        }
+        if (mobileMode) {
+          if (logoSize < 56) {
+            layout.logoSize = 32;
+            layout.mobileNavHeight = 56;
+            layout.mobileFontSize = 14;
+            layout.mobileIconSize = 20;
+          } else {
+            layout.logoSize = 48;
+            layout.mobileNavHeight = 72;
+            layout.mobileFontSize = 16;
+            layout.mobileIconSize = 24;
+          }
+        } else {
+          layout.logoSize = logoSize;
+          if (logoSize < 56) {
+            layout.navHeight = logoSize + 24;
+          } else if (logoSize >= 56 && logoSize < 64) {
+            layout.navHeight = logoSize + 40;
+          } else {
+            layout.navHeight = 120;
+          }
+        }
+
+        /** button */
+        if (logoSize < 48) {
+          layout.buttonHeight = 40;
+          layout.buttonPX = 20;
+        } else if (logoSize >= 48 && logoSize < 56) {
+          layout.buttonHeight = 48;
+          layout.buttonPX = 20;
+        } else {
+          layout.buttonHeight = 56;
+          layout.buttonPX = 28;
+        }
+        return layout;
+      }, [logoSize, mobileMode]);
+      const [isOverWidthLogo, setIsOverWidthLogo] = React.useState(false);
+      const logoRectRef = React.useRef(null);
+      const contentRef = React.useRef(null);
+      const logoRef = React.useRef(null);
+      const buttonContainerRef = React.useRef(null);
+      const [pageWidth, setPageWidth] = React.useState(0);
+      const [minPageWidth, setMinPageWidth] = React.useState(MIN_PAGE_WIDTH);
+      const [skeletonMinWidth, setSkeletonMinWidth] = React.useState(MIN_PAGE_WIDTH);
+      const [logoWidth, setLogoWidth] = React.useState(0);
+      const [buttonContainerWidth, setButtonContainerWidth] = React.useState(0);
+      const [minLimit, setMinLimit] = React.useState(false);
+      const [leftLimit, setLeftLimit] = React.useState(false);
+      const [rightLimit, setRightLimit] = React.useState(false);
+      const center = React.useMemo(() => !leftLimit && !rightLimit, [leftLimit, rightLimit]);
+      const handlePageWidthUpdate = React.useCallback(() => {
+        var _contentRef$current;
+        if (mobileMode || !logoWidth) {
+          return;
+        }
+        const contentWidth = ((_contentRef$current = contentRef.current) === null || _contentRef$current === void 0 ? void 0 : _contentRef$current.clientWidth) || 0;
+        const leftRestWidth = contentWidth / 2 - logoWidth - NAV_GAP;
+        const rightRestWidth = contentWidth / 2 - buttonContainerWidth - NAV_GAP;
+        const pageItemWidth = Math.max(Math.min(leftRestWidth, rightRestWidth) * 2, minPageWidth);
+        const newMinLimit = logoWidth + NAV_GAP + minPageWidth + NAV_GAP + buttonContainerWidth > contentWidth;
+        const newSkeletonMinWidth = newMinLimit ? minPageWidth : Math.max(contentWidth - logoWidth - buttonContainerWidth - NAV_GAP * 2, minPageWidth);
+        const leftLimit = contentWidth / 2 - logoWidth - NAV_GAP < minPageWidth / 2;
+        const rightLimit = contentWidth / 2 - buttonContainerWidth - NAV_GAP < minPageWidth / 2;
+        setLeftLimit(leftLimit);
+        setRightLimit(rightLimit);
+        setMinLimit(newMinLimit);
+        setPageWidth(pageItemWidth);
+        setSkeletonMinWidth(newSkeletonMinWidth);
+      }, [minPageWidth, mobileMode, logoWidth, buttonContainerWidth]);
+      React.useEffect(() => {
+        handlePageWidthUpdate();
+      }, [logoSize, isOverWidthLogo, navItems, showButton, primaryButton, secondaryButton, handlePageWidthUpdate]);
+      React.useEffect(() => {
+        setMinPageWidth(MIN_PAGE_WIDTH);
+      }, [navItems]);
+
+      /** navigation ResizeObserver start */
+      const handleViewportWidthChange = React.useCallback(throttle(entries => {
+        const entry = entries[0];
+        const rect = entry.contentRect;
+        const width = Math.min(window.innerWidth, rect.width);
+        const height = Math.min(window.innerHeight, rect.height);
+        setViewportHeight(height);
+        if (width > MOBILE_WIDTH) {
+          mobileMode && setMobileMode(false);
+          handlePageWidthUpdate();
+        } else {
+          !mobileMode && setMobileMode(true);
+        }
+      }, 32), [mobileMode, handlePageWidthUpdate]);
+      React.useEffect(() => {
+        const scrollDom = document.getElementById(viewportId);
+        if (!scrollDom) {
+          return;
+        }
+        const observer = new ResizeObserver(handleViewportWidthChange);
+        observer.observe(scrollDom);
+        return () => {
+          observer.disconnect();
+        };
+      }, [viewportId, handleViewportWidthChange]);
+      /** navigation ResizeObserver end */
+
+      /** logo ResizeObserver start */
+      const handleLogoWidthChange = React.useCallback(throttle(entries => {
+        const entry = entries[0];
+        const rect = entry.contentRect;
+        rect.width && setLogoWidth(rect.width);
+      }, 32), []);
+      React.useEffect(() => {
+        if (!logoRef.current || mobileMode) {
+          return;
+        }
+        const observer = new ResizeObserver(handleLogoWidthChange);
+        observer.observe(logoRef.current);
+        return () => {
+          observer.disconnect();
+        };
+      }, [mobileMode, handleLogoWidthChange]);
+      /** logo ResizeObserver end */
+
+      /** button ResizeObserver start */
+      const handleButtonWidthChange = React.useCallback(throttle(entries => {
+        const entry = entries[0];
+        const rect = entry.contentRect;
+        rect.width && setButtonContainerWidth(rect.width);
+      }, 32), []);
+      React.useEffect(() => {
+        if (!buttonContainerRef.current || mobileMode || minLimit || !buttonVisible) {
+          return;
+        }
+        const observer = new ResizeObserver(handleButtonWidthChange);
+        observer.observe(buttonContainerRef.current);
+        return () => {
+          observer.disconnect();
+        };
+      }, [mobileMode, handleButtonWidthChange, minLimit, buttonVisible]);
+      /** button ResizeObserver end */
+
+      React.useEffect(() => {
+        if (!mobileMode) {
+          setMobileListVisible(false);
+        } else {
+          setMoreListVisible(false);
+        }
+      }, [mobileMode]);
+      const handleCloseMoreList = e => {
+        var _moreButtonRef$curren;
+        if ((_moreButtonRef$curren = moreButtonRef.current) !== null && _moreButtonRef$curren !== void 0 && _moreButtonRef$curren.contains(e.target)) {
+          return;
+        }
+        if (moreListVisible) {
+          setMoreListVisible(false);
+        }
+      };
+      React.useEffect(() => {
+        moreListVisible && window.addEventListener('click', handleCloseMoreList);
+        return () => {
+          window.removeEventListener('click', handleCloseMoreList);
+        };
+      }, [moreListVisible]);
+      React.useEffect(() => {
+        var _window2;
+        const handleScroll = throttle(e => {
+          if (!e.target) {
+            return;
+          }
+          if (mobileListVisible) {
+            setMobileListVisible(false);
+          }
+        }, 32);
+        const scrollContainer = (_window2 = window) === null || _window2 === void 0 ? void 0 : _window2.document.getElementById(viewportId);
+        scrollContainer === null || scrollContainer === void 0 || scrollContainer.addEventListener('scroll', handleScroll);
+        return () => {
+          scrollContainer === null || scrollContainer === void 0 || scrollContainer.removeEventListener('scroll', handleScroll);
+        };
+      }, [mobileListVisible]);
+      React.useEffect(() => {
+        let count = navItems.length;
+        if (showButton) {
+          if (primaryButton) {
+            count++;
+          }
+          if (secondaryButton) {
+            count++;
+          }
+        }
+        setMobileEntryVisible(count > 1);
+        count <= 1 && setMobileListVisible(false);
+      }, [primaryButton, secondaryButton, navItems, showButton]);
+
+      /** update logo mode start */
+      const handleImageAspectRatioUpdate = () => {
+        if (!logoRectRef.current) {
+          return;
+        }
+        const currentAspectRatio = LOGO_MAX_WIDTH / layoutObject.logoSize;
+        const {
+          naturalWidth,
+          naturalHeight
+        } = logoRectRef.current;
+        const aspectRatio = naturalWidth / naturalHeight;
+        setIsOverWidthLogo(aspectRatio > currentAspectRatio);
+      };
+      React.useEffect(() => {
+        var _logoRectRef$current;
+        if (((_logoRectRef$current = logoRectRef.current) === null || _logoRectRef$current === void 0 ? void 0 : _logoRectRef$current.logo) === logo) {
+          handleImageAspectRatioUpdate();
+          return;
+        }
+        const image = new Image();
+        image.onload = () => {
+          logoRectRef.current = {
+            logo,
+            naturalWidth: image.naturalWidth,
+            naturalHeight: image.naturalHeight
+          };
+          handleImageAspectRatioUpdate();
+        };
+        image.src = logo;
+      }, [logo, layoutObject]);
+      /** update logo mode end */
+
+      const renderNavItem = (item, index) => {
+        return /*#__PURE__*/React.createElement(EditableButton, {
+          key: item,
+          style: {
+            fontSize: layoutObject.fontSize
+          },
+          className: `${index ? 'ml-8' : ''} py-3 text-black whitespace-nowrap cursor-pointer hover:text-black/60 hover:transition-all duration-100 dark:text-white dark:hover:text-white/60`
+        }, /*#__PURE__*/React.createElement(EditableText, {
+          propKey: `navItems_${index}`
+        }, item));
+      };
+      const renderMoreListItems = (items, startIndex = 0) => {
+        return items.map((item, index) => /*#__PURE__*/React.createElement(EditableButton, {
+          key: item,
+          style: {
+            height: layoutObject.dropDownHeight,
+            paddingLeft: layoutObject.dropDownPaddingLeft,
+            paddingRight: layoutObject.dropDownPaddingRight,
+            fontSize: layoutObject.fontSize
+          },
+          className: "flex-shrink-0 w-full h-full text-black whitespace-nowrap cursor-pointer text-left hover:text-black/60 hover:transition-all duration-100 dark:text-white dark:hover:text-white/60",
+          onClick: () => setMoreListVisible(false)
+        }, /*#__PURE__*/React.createElement(EditableText, {
+          propKey: `navItems_${startIndex + index}`
+        }, item)));
+      };
+      const renderRest = omittedItems => /*#__PURE__*/React.createElement("div", {
+        className: "relative ml-8 "
+      }, /*#__PURE__*/React.createElement(motion.button, {
+        ref: moreButtonRef,
+        className: "w-10 h-10 flex items-center justify-center flex-shrink-0",
+        onClick: () => setMoreListVisible(!moreListVisible),
+        whileTap: {
+          scale: 0.9
+        },
+        style: {
+          fontSize: layoutObject.fontSize
+        }
+      }, /*#__PURE__*/React.createElement("svg", {
+        style: {
+          transform: 'translateY(2px)'
+        },
+        className: "hover:transition-all hover:scale-110 text-black dark:text-white",
+        width: "20",
+        height: "20",
+        viewBox: "0 0 20 20",
+        fill: "none",
+        xmlns: "http://www.w3.org/2000/svg"
+      }, /*#__PURE__*/React.createElement("circle", {
+        cx: "3",
+        cy: "10",
+        r: "1.5",
+        fill: "currentColor"
+      }), /*#__PURE__*/React.createElement("circle", {
+        cx: "10",
+        cy: "10",
+        r: "1.5",
+        fill: "currentColor"
+      }), /*#__PURE__*/React.createElement("circle", {
+        cx: "17",
+        cy: "10",
+        r: "1.5",
+        fill: "currentColor"
+      }))), moreListVisible && /*#__PURE__*/React.createElement(AnimatePresence, null, /*#__PURE__*/React.createElement(motion.div, {
+        style: {
+          boxShadow: '0px 2px 4px 0px rgba(0, 0, 0, 0.06)',
+          fontSize: layoutObject.fontSize
+        },
+        className: "max-h-96 overflow-auto overscroll-contain absolute z-40 top-full right-0 flex flex-col p-1 rounded-md bg-white border border-[#0000000a] dark:border-white/10 dark:bg-black",
+        animate: {
+          scale: [0, 1],
+          opacity: [0, 1]
+        }
+      }, renderMoreListItems(omittedItems, navItems.length - omittedItems.length))));
+      const handleOverflowUpdate = (widths, overflow) => {
+        if (mobileMode) {
+          return;
+        }
+        if (widths.length >= 2) {
+          const firstItemWidth = widths[0];
+          const restItemWidth = overflow ? widths[widths.length - 1] : 72;
+          setMinPageWidth(firstItemWidth + restItemWidth);
+        } else if (navItems.length === 1 && widths.length && widths[0]) {
+          setMinPageWidth(widths[0]);
+        } else {
+          setMinPageWidth(MIN_PAGE_WIDTH);
+        }
+      };
+      const renderNavList = items => {
+        return /*#__PURE__*/React.createElement("div", {
+          className: `${buttonVisible ? 'absolute' : 'flex flex-1 flex-shrink'} ${center ? buttonVisible ? 'left-1/2 -translate-x-1/2' : '' : leftLimit || minLimit ? `left-[${logoWidth + NAV_GAP}px]` : `right-[${buttonContainerWidth + NAV_GAP}px]`} ${moreListVisible ? '' : 'overflow-hidden'}`,
+          style: {
+            width: buttonVisible ? pageWidth : undefined,
+            minWidth: buttonVisible ? minPageWidth : undefined
+          }
+        }, /*#__PURE__*/React.createElement(Overflow, {
+          data: items,
+          style: {
+            height: layoutObject.logoSize
+          },
+          className: `flex items-center ${buttonVisible ? 'justify-center' : 'justify-end'} flex-shrink flex-1`,
+          renderItem: renderNavItem,
+          maxCount: maxCount,
+          minCount: 1,
+          renderRest: renderRest,
+          onUpdate: handleOverflowUpdate
+        }));
+      };
+      const handleMobileButtonClick = e => {
+        mobileListVisible && setMobileListVisible(false);
+      };
+      const renderContent = () => {
+        if (mobileMode) {
+          return /*#__PURE__*/React.createElement("div", {
+            className: "relative flex flex-col w-full h-full"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "flex flex-shrink-0 z-40 w-full pl-4 justify-between items-center overflow-hidden md:hidden",
+            style: {
+              height: layoutObject.mobileNavHeight,
+              fontSize: layoutObject.mobileFontSize
+            }
+          }, /*#__PURE__*/React.createElement(EditableImg, {
+            propKey: "logo",
+            style: {
+              height: isOverWidthLogo ? undefined : layoutObject.logoSize
+            },
+            className: `${isOverWidthLogo ? `!w-[${LOGO_MAX_WIDTH}px]` : `!w-auto`} !max-w-[${LOGO_MAX_WIDTH}px] object-cover flex-shrink min-w-0`,
+            src: logo,
+            alt: "logo"
+          }), /*#__PURE__*/React.createElement(motion.button, {
+            className: `${!mobileEntryVisible ? 'hidden' : ''} flex justify-center items-center text-black flex-shrink-0`,
+            onClick: () => setMobileListVisible(!mobileListVisible),
+            whileTap: {
+              scale: 0.9
+            },
+            style: {
+              width: layoutObject.mobileNavHeight,
+              height: layoutObject.mobileNavHeight,
+              fontSize: layoutObject.mobileFontSize
+            }
+          }, mobileListVisible ? /*#__PURE__*/React.createElement("svg", {
+            width: layoutObject.mobileIconSize,
+            height: layoutObject.mobileIconSize,
+            viewBox: "0 0 20 20",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg"
+          }, /*#__PURE__*/React.createElement("path", {
+            d: "M4 16L16 4.25115",
+            stroke: "currentColor",
+            strokeWidth: "1.5",
+            strokeLinecap: "round"
+          }), /*#__PURE__*/React.createElement("path", {
+            d: "M4 4L16 15.7489",
+            stroke: "currentColor",
+            strokeWidth: "1.5",
+            strokeLinecap: "round"
+          })) : /*#__PURE__*/React.createElement("svg", {
+            width: layoutObject.mobileIconSize,
+            height: layoutObject.mobileIconSize,
+            viewBox: "0 0 20 20",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg"
+          }, /*#__PURE__*/React.createElement("path", {
+            d: "M3 5L16.375 5",
+            stroke: "currentColor",
+            strokeWidth: "1.5",
+            strokeLinecap: "round"
+          }), /*#__PURE__*/React.createElement("path", {
+            d: "M3 10H16.375",
+            stroke: "currentColor",
+            strokeWidth: "1.5",
+            strokeLinecap: "round"
+          }), /*#__PURE__*/React.createElement("path", {
+            d: "M3 15H16.375",
+            stroke: "currentColor",
+            strokeWidth: "1.5",
+            strokeLinecap: "round"
+          })))), mobileListVisible && /*#__PURE__*/React.createElement("div", {
+            ref: mobileListRef,
+            className: "absolute z-50 top-full w-full flex flex-grow flex-shrink flex-col bg-[#ffffffe0] dark:bg-black/80 backdrop-blur-xl rounded-b-3xl shadow-xl overflow-hidden md:hidden",
+            style: {
+              fontSize: layoutObject.mobileFontSize,
+              height: viewportHeight - layoutObject.mobileNavHeight - 24
+            }
+          }, /*#__PURE__*/React.createElement(motion.nav, {
+            className: "w-full h-full flex flex-col rounded-b-3xl",
+            animate: {
+              y: [20, 0],
+              opacity: [0, 1]
+            },
+            transition: {
+              duration: 0.4
+            }
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "flex flex-col flex-grow flex-shrink overflow-auto overscroll-contain"
+          }, navItems.map((item, navIndex) => /*#__PURE__*/React.createElement(EditableButton, {
+            style: {
+              height: layoutObject.mobileNavItemHeight,
+              maxHeight: layoutObject.mobileNavItemHeight,
+              fontSize: layoutObject.mobileFontSize
+            },
+            key: item,
+            onClick: handleMobileButtonClick,
+            className: "w-full flex-grow-0 flex-shrink-0 text-black whitespace-nowrap cursor-pointer hover:text-black/60 hover:transition-all duration-100 dark:text-white dark:hover:text-white/60 select-none"
+          }, /*#__PURE__*/React.createElement(EditableText, {
+            propKey: `navItems_${navIndex}`
+          }, item)))), /*#__PURE__*/React.createElement("div", {
+            className: `${showButton ? '' : 'hidden'} w-full h-fit flex-shrink-0 flex items-center justify-between overflow-hidden gap-5 px-5 py-[10px]`
+          }, secondaryButton && /*#__PURE__*/React.createElement(EditableButton, {
+            onClick: handleMobileButtonClick,
+            style: {
+              height: layoutObject.mobileNavItemHeight,
+              fontSize: layoutObject.mobileFontSize
+            },
+            className: "BTN-SECONDARY overflow-hidden px-10 flex-1 group/nav whitespace-nowrap font-normal text-black flex justify-center gap-2 items-center rounded-full hover:bg-black/5 hover:transition-all hover:duration-300"
+          }, /*#__PURE__*/React.createElement(EditableText, {
+            className: "overflow-hidden text-ellipsis",
+            propKey: "secondaryButton_textAttr"
+          }, secondaryButton.textAttr), /*#__PURE__*/React.createElement(EditableIcon, {
+            propKey: "secondaryButton_icon",
+            icon: secondaryButton.icon,
+            iconLibrary: "FontAwesome",
+            className: " text-black group-hover/nav:translate-x-1 transition-all"
+          })), primaryButton && /*#__PURE__*/React.createElement(EditableButton, {
+            onClick: handleMobileButtonClick,
+            style: {
+              height: layoutObject.mobileNavItemHeight,
+              color: primaryButton.textColor ? primaryButton.textColor : 'black',
+              fontSize: layoutObject.mobileFontSize
+            },
+            className: "BTN-PRIMARY overflow-hidden px-10 flex-1 group/nav whitespace-nowrap font-normal flex justify-center gap-2 items-center rounded-full bg-blue-500 hover:bg-blue-600 hover:transition-all hover:duration-300"
+          }, /*#__PURE__*/React.createElement(EditableText, {
+            className: "overflow-hidden text-ellipsis",
+            propKey: "primaryButton_textAttr"
+          }, primaryButton.textAttr), /*#__PURE__*/React.createElement(EditableIcon, {
+            propKey: "primaryButton_icon",
+            icon: primaryButton.icon,
+            iconLibrary: "FontAwesome",
+            style: {
+              color: primaryButton.textColor ? primaryButton.textColor : 'black'
+            },
+            className: " group-hover/nav:translate-x-1 transition-all"
+          }))))));
+        }
+        return /*#__PURE__*/React.createElement("div", {
+          style: {
+            height: layoutObject.navHeight
+          },
+          className: "relative w-full hidden gap-16 md:flex justify-between items-center"
+        }, /*#__PURE__*/React.createElement("div", {
+          className: "h-full flex flex-shrink-0 items-center justify-start",
+          ref: logoRef,
+          style: {
+            maxWidth: LOGO_MAX_WIDTH
+          }
+        }, /*#__PURE__*/React.createElement(EditableImg, {
+          propKey: "logo",
+          style: {
+            height: isOverWidthLogo ? undefined : layoutObject.logoSize
+          },
+          className: `${isOverWidthLogo ? `!w-[${LOGO_MAX_WIDTH}px]` : `!w-auto`} !max-w-[${LOGO_MAX_WIDTH}px] object-cover flex-shrink-0 min-w-0`,
+          src: logo,
+          alt: "logo"
+        })), renderNavList(navItems), buttonVisible && /*#__PURE__*/React.createElement("div", {
+          className: "flex flex-shrink flex-1",
+          style: {
+            minWidth: leftLimit || rightLimit ? skeletonMinWidth : undefined
+          }
+        }), buttonVisible && /*#__PURE__*/React.createElement("div", {
+          className: `w-fit h-full flex items-center justify-end overflow-hidden gap-3 ${minLimit ? 'flex-shrink' : 'flex-shrink-0'}`,
+          ref: buttonContainerRef
+        }, secondaryButton && /*#__PURE__*/React.createElement(EditableButton, {
+          style: {
+            height: layoutObject.buttonHeight,
+            fontSize: layoutObject.fontSize
+          },
+          className: "BTN-SECONDARY max-w-[180px] w-fit px-5 group/nav whitespace-nowrap font-normal text-black flex gap-2 items-center rounded-full hover:bg-black/5 hover:transition-all hover:duration-300"
+        }, /*#__PURE__*/React.createElement(EditableText, {
+          className: "overflow-hidden text-ellipsis",
+          propKey: "secondaryButton_textAttr"
+        }, secondaryButton.textAttr), /*#__PURE__*/React.createElement(EditableIcon, {
+          propKey: "secondaryButton_icon",
+          icon: secondaryButton.icon,
+          iconLibrary: "FontAwesome",
+          className: "text-sm text-black group-hover/nav:translate-x-1 transition-all"
+        })), primaryButton && /*#__PURE__*/React.createElement(EditableButton, {
+          style: {
+            height: layoutObject.buttonHeight,
+            color: primaryButton.textColor ? primaryButton.textColor : 'black',
+            padding: `0 ${layoutObject.buttonPX}px`,
+            fontSize: layoutObject.fontSize
+          },
+          className: "BTN-PRIMARY max-w-[180px] w-fit  group/nav  whitespace-nowrap font-normal flex gap-2 items-center rounded-full bg-blue-500 hover:bg-blue-600 hover:transition-all hover:duration-300"
+        }, /*#__PURE__*/React.createElement(EditableText, {
+          className: "overflow-hidden text-ellipsis",
+          propKey: "primaryButton_textAttr"
+        }, primaryButton.textAttr), /*#__PURE__*/React.createElement(EditableIcon, {
+          propKey: "primaryButton_icon",
+          icon: primaryButton.icon,
+          iconLibrary: "FontAwesome",
+          style: {
+            color: primaryButton.textColor ? primaryButton.textColor : 'black'
+          },
+          className: "text-sm group-hover/nav:translate-x-1 transition-all"
+        }))));
+      };
+      return /*#__PURE__*/React.createElement("section", {
+        style: {
+          transitionTimingFunction: 'cubic-bezier(.165,.84,.44,1)',
+          transitionDuration: '300ms',
+          fontSize: layoutObject.fontSize
+        },
+        className: `${fixedTop ? 'sticky' : 'relative'} z-40 top-0 w-full bg-[#ffffffe0] dark:bg-black/80 backdrop-blur-sm md:px-8`
+      }, /*#__PURE__*/React.createElement("div", {
+        className: "max-w-7xl mx-auto w-full h-full",
+        ref: contentRef
+      }, renderContent()));
+    }
+    Navigation_1984162465388769282 = /*#__PURE__*/React.createElement(ErrorBoundary, {
+      key: "XAnbK9lwUe_2e5UQ6OEZF"
+    }, /*#__PURE__*/React.createElement(Navigation_02, {
+      "fixedTop": false,
+      "logo": "https://cdn.wegic.ai/assets/onepage/thread/icon/1761896388262.png",
+      "logoSize": 40,
+      "siteTitle": "Lý luận Mác-Lênin và kinh tế xã hội",
+      "navItems": ["link=home&text=Trang%20ch%E1%BB%A7", "link=study-materials&text=T%C3%A0i%20li%E1%BB%87u%20h%E1%BB%8Dc%20t%E1%BA%ADp"],
+      "showButton": true,
+      "primaryButton": {
+        "icon": "fa-solid fa-arrow-right",
+        "textAttr": "link=&linkType=inner&query=pageId%3D1984163421623988226%26sectionId%3DkEeauZ7arjWeaB3vavvjE&text=Li%C3%AAn%20h%E1%BB%87%20v%E1%BB%9Bi%20ch%C3%BAng%20t%C3%B4i",
+        "textColor": "#ffffff"
+      },
+      "version": 3,
+      key: "XAnbK9lwUe_2e5UQ6OEZF"
+    }));
+  } catch (error) {}
+  {
+    const list = [];
+    {
+      function _extends() {
+        _extends = Object.assign ? Object.assign.bind() : function (target) {
+          for (var i = 1; i < arguments.length; i++) {
+            var source = arguments[i];
+            for (var key in source) {
+              if (Object.prototype.hasOwnProperty.call(source, key)) {
+                target[key] = source[key];
+              }
+            }
+          }
+          return target;
+        };
+        return _extends.apply(this, arguments);
+      }
+      try {
+        function HeroStackedContentMediaSocial({
+          background,
+          heroPrimaryHeadline,
+          primaryDescription,
+          sticker,
+          media,
+          secondaryHeadline,
+          secondaryDescription,
+          primaryButton,
+          secondaryButton,
+          avatarList
+        }) {
+          return /*#__PURE__*/React.createElement("div", {
+            className: "flex justify-center items-center flex-col gap-2 bg-white py-20 px-6 md:py-32 md:px-12 lg:py-36 lg:px-20 relative",
+            "data-id": "jvsNoqwOZDTL8WsaC1E5V"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "absolute size-full inset-0 z-0"
+          }, /*#__PURE__*/React.createElement(ImageBackground, _extends({}, background, {
+            slotId: "background"
+          }), " ")), /*#__PURE__*/React.createElement("div", {
+            className: "flex flex-col items-start max-w-7xl gap-12 md:justify-center md:items-center md:gap-20 z-10"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "flex flex-col items-start self-stretch max-w-2xl gap-6 md:max-w-7xl"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "flex justify-center items-center gap-2 md:flex-[1_0_0] md:justify-start lg:max-w-2xl"
+          }, /*#__PURE__*/React.createElement(CreativeAdvertisingMainHeadline, _extends({}, heroPrimaryHeadline, {
+            slotId: "heroPrimaryHeadline"
+          }), " ")), /*#__PURE__*/React.createElement("div", {
+            className: "flex justify-center items-center gap-2 md:justify-start lg:max-w-2xl"
+          }, /*#__PURE__*/React.createElement(DefaultDescription, _extends({}, primaryDescription, {
+            slotId: "primaryDescription"
+          }), " "))), /*#__PURE__*/React.createElement("div", {
+            className: "flex flex-col items-start self-stretch gap-12 md:justify-between md:flex-row md:gap-0 md:max-w-7xl"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "flex items-center justify-center size-32 overflow-hidden gap-2 mr-20"
+          }, /*#__PURE__*/React.createElement(StickerMoodStarModernLight, _extends({}, sticker, {
+            slotId: "sticker"
+          }), " ")), /*#__PURE__*/React.createElement("div", {
+            className: "flex flex-col items-end gap-12 self-stretch md:flex-[1_0_0]"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "flex justify-center items-center max-w-5xl max-h-[27.42856rem] rounded-3xl self-stretch aspect-[342.00/146.57] md:aspect-[464/198.86] lg:aspect-[1024.00/438.86] object-cover overflow-hidden"
+          }, /*#__PURE__*/React.createElement(BasicImage, _extends({}, media, {
+            slotId: "media"
+          }), " ")), /*#__PURE__*/React.createElement("div", {
+            className: "flex flex-col items-start self-stretch max-w-5xl gap-12 md:flex-row md:gap-0 md:justify-between md:relative"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "flex flex-col items-start self-stretch max-w-xl gap-6 pr-20 pb-[4.5rem] md:flex-[1_0_0] relative md:static"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "flex items-center gap-2 self-stretch"
+          }, /*#__PURE__*/React.createElement(MediumAndBoldBlackText, _extends({}, secondaryHeadline, {
+            slotId: "secondaryHeadline"
+          }), " ")), /*#__PURE__*/React.createElement("div", {
+            className: "flex items-center justify-center gap-2 self-stretch"
+          }, /*#__PURE__*/React.createElement(RegularDescription, _extends({}, secondaryDescription, {
+            slotId: "secondaryDescription"
+          }), " ")), /*#__PURE__*/React.createElement("div", {
+            className: "absolute w-fit h-12 left-0 bottom-0 flex items-start self-stretch gap-3 overflow-visible"
+          }, /*#__PURE__*/React.createElement(Subtle3DLayeringGradientButton, _extends({}, primaryButton, {
+            slotId: "primaryButton"
+          }), " "), /*#__PURE__*/React.createElement(IconAndTwoTextBlackBorderedButton, _extends({}, secondaryButton, {
+            slotId: "secondaryButton"
+          }), " "))), /*#__PURE__*/React.createElement("div", {
+            className: "flex flex-col items-start gap-2"
+          }, /*#__PURE__*/React.createElement(FullRoundedStackedAvatars, _extends({}, avatarList, {
+            slotId: "avatarList"
+          }), " ")))))));
+        }
+        ;
+        function ImageBackground({
+          slotId,
+          imageUrl = 'https://img.js.design/assets/img/68463fc6d3edcee12aed1c80.png'
+        }) {
+          return /*#__PURE__*/React.createElement("div", {
+            "data-slot-type": "ImageBackground",
+            className: "size-full bg-cover bg-center"
+          }, /*#__PURE__*/React.createElement(EditableImg, {
+            isFCP: true,
+            propKey: `${slotId}_imageUrl`,
+            src: imageUrl,
+            className: "size-full object-cover"
+          }));
+        }
+        function CreativeAdvertisingMainHeadline({
+          slotId,
+          weText = "We",
+          makeText = "make",
+          advertisingText = "advertising",
+          forText = "for",
+          theText = "the",
+          newText = "new",
+          emphasizedText = "emphasized"
+        }) {
+          return /*#__PURE__*/React.createElement("h1", {
+            className: "inline text-surface-950 leading-[1.1] tracking-tight md:text-[4rem] text-[1.75rem] font-[800] lowercase block",
+            "data-slot-type": "PrimaryHeadline"
+          }, /*#__PURE__*/React.createElement("span", {
+            className: "inline-block relative mx-[2px] sm:mx-[6px] lg:mx-[6px]"
+          }, /*#__PURE__*/React.createElement(EditableText, {
+            propKey: `${slotId}_weText`
+          }, weText)), /*#__PURE__*/React.createElement("span", {
+            className: "inline-block relative mx-[2px] sm:mx-[6px] lg:mx-[6px]"
+          }, /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement(EditableText, {
+            propKey: `${slotId}_makeText`
+          }, makeText))), /*#__PURE__*/React.createElement("span", {
+            className: "inline-block relative mx-[2px] sm:mx-[6px] lg:mx-[6px]"
+          }, /*#__PURE__*/React.createElement("em", {
+            className: "inline-block italic font-normal relative normal-case transform translate-y-[-0.855px]"
+          }, /*#__PURE__*/React.createElement(EditableText, {
+            propKey: `${slotId}_advertisingText`
+          }, advertisingText))), /*#__PURE__*/React.createElement("span", {
+            className: "inline-block relative mx-[2px] sm:mx-[6px] lg:mx-[6px]"
+          }, /*#__PURE__*/React.createElement(EditableText, {
+            propKey: `${slotId}_forText`
+          }, forText)), /*#__PURE__*/React.createElement("span", {
+            className: "inline-block relative mx-[2px] sm:mx-[6px] lg:mx-[6px]"
+          }, /*#__PURE__*/React.createElement(EditableText, {
+            propKey: `${slotId}_theText`
+          }, theText)), /*#__PURE__*/React.createElement("span", {
+            className: "inline-block relative mx-[2px] sm:mx-[6px] lg:mx-[6px]"
+          }, /*#__PURE__*/React.createElement(EditableText, {
+            propKey: `${slotId}_newText`
+          }, newText)), /*#__PURE__*/React.createElement("span", {
+            className: "inline-block relative mx-[2px] sm:mx-[6px] lg:mx-[6px]"
+          }, /*#__PURE__*/React.createElement("svg", {
+            width: "100%",
+            viewBox: "0 0 608 100",
+            className: "absolute bottom-[-65px] left-[345px] w-[105%] h-auto fill-none transform translate-x-[-362px] translate-y-[-59px]"
+          }, /*#__PURE__*/React.createElement("path", {
+            d: "M322.902 98.9997C232.515 99.0422 140.637 94.7899 58.0275 80.853C31.532 76.3775 2.92086 69.1167 1.08733 58.1139C-0.222339 50.1514 13.3981 42.965 28.5701 37.4583C61.2714 25.5944 103.362 18.1423 146.239 12.7206C228.606 2.3131 316.878 -1.23755 403.155 2.36627C456.307 4.58809 509.519 9.62707 555.338 20.109C581.41 26.0728 606.777 35.279 606.999 46.8453C607.12 53.7659 597.831 60.3569 584.835 65.1939C571.839 70.0309 555.398 73.3158 538.675 76.0266C463.097 88.252 379.057 89.8891 297.011 91.3668",
+            stroke: "currentColor",
+            strokeWidth: "2",
+            strokeLinecap: "round",
+            strokeLinejoin: "round"
+          })), /*#__PURE__*/React.createElement(EditableText, {
+            propKey: `${slotId}_emphasizedText`
+          }, emphasizedText)));
+        }
+        function DefaultDescription({
+          slotId,
+          text = 'Hello'
+        }) {
+          return /*#__PURE__*/React.createElement(EditableText, {
+            "data-slot-type": "PrimaryDescription",
+            className: `text-sm font-normal md:text-base text-surface-500`,
+            propKey: `${slotId}_text`
+          }, text);
+        }
+        ;
+        function StickerMoodStarModernLight({
+          slotId,
+          image = 'https://cdn.wegic.ai/assets/img/sticker/mood-star-modern-light.png',
+          isRotate = true
+        }) {
+          return /*#__PURE__*/React.createElement(React.Fragment, null, isRotate ? /*#__PURE__*/React.createElement(motion.div, {
+            "data-slot-type": "Sticker",
+            className: "flex items-center justify-center size-fit overflow-hidden rounded-full",
+            style: {
+              willChange: 'transform'
+            },
+            animate: {
+              rotate: [0, 360]
+            },
+            transition: {
+              repeat: Infinity,
+              duration: 8,
+              ease: 'linear'
+            }
+          }, /*#__PURE__*/React.createElement(EditableImg, {
+            propKey: `${slotId}_image`,
+            className: "size-32 object-cover rounded-full overflow-hidden",
+            src: image
+          })) : /*#__PURE__*/React.createElement("div", {
+            "data-slot-type": "Sticker",
+            className: "flex items-center justify-center size-fit overflow-hidden rounded-full"
+          }, /*#__PURE__*/React.createElement(EditableImg, {
+            propKey: `${slotId}_image`,
+            className: "size-32 object-cover rounded-full overflow-hidden",
+            src: image
+          })));
+        }
+        function BasicImage({
+          slotId,
+          image = 'https://images.unsplash.com/photo-1749330513873-09ffa91b0aae?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0'
+        }) {
+          return /*#__PURE__*/React.createElement(EditableImg, {
+            className: "w-full h-full object-cover",
+            src: image,
+            propKey: `${slotId}_image`,
+            "data-slot-type": "Image"
+          });
+        }
+        function MediumAndBoldBlackText({
+          text = 'Hello',
+          slotId = 'MediumAndBoldBlackText'
+        }) {
+          return /*#__PURE__*/React.createElement(EditableText, {
+            "data-slot-type": "SecondaryHeadline",
+            className: "font-bold text-2xl/[128%] text-surface-950 text-[1.25rem] md:text-[1.5rem]",
+            propKey: `${slotId}_text`
+          }, text);
+        }
+        ;
+        function RegularDescription({
+          text = 'Hello',
+          slotId = 'RegularDescription'
+        }) {
+          return /*#__PURE__*/React.createElement(EditableText, {
+            "data-slot-type": "SecondaryDescription",
+            className: "font-normal md:text-base text-sm text-surface-500",
+            propKey: `${slotId}_text`
+          }, text);
+        }
+        ;
+        function Subtle3DLayeringGradientButton({
+          textAttr = 'Go to Home',
+          icon = 'fa-brands fa-apple',
+          slotId = 'Subtle3DLayeringGradientButton'
+        }) {
+          return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(EditableButton, {
+            "data-slot-type": "PrimaryButton",
+            className: " relative inline-flex cursor-pointer items-center justify-center gap-3  whitespace-nowrap font-semibold text-base rounded-2xl px-6 h-12 text-white bg-blue-500 transition-all duration-300 transform-gpu active:opacity-75 active:scale-[0.9] hover:bg-blue-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring  aria-disabled:pointer-events-none aria-disabled:opacity-50 before:content-[''] before:absolute before:inset-0 before:rounded-2xl before:bg-gradient-to-b before:from-white/30 before:to-white/0 before:mix-blend-soft-light before:transition-opacity before:duration-300 hover:before:opacity-50 shadow-lg shadow-[inset_0_0_0_1px_rgba(0,0,0,0.15)] group "
+          }, /*#__PURE__*/React.createElement(EditableIcon, {
+            propKey: `${slotId}_icon`,
+            icon: icon,
+            className: "text-white flex items-center"
+          }), /*#__PURE__*/React.createElement("div", {
+            className: "relative overflow-hidden h-6 flex items-center"
+          }, /*#__PURE__*/React.createElement(EditableText, {
+            propKey: `${slotId}_textAttr`,
+            className: "text-white transition-transform duration-300 ease-in-out group-hover:-translate-y-full"
+          }, textAttr), /*#__PURE__*/React.createElement(EditableText, {
+            propKey: `${slotId}_textAttr`,
+            className: "text-white left-0 top-full transition-transform duration-300 ease-in-out group-hover:-translate-y-full",
+            style: {
+              position: 'absolute'
+            }
+          }, textAttr))));
+        }
+        ;
+        function IconAndTwoTextBlackBorderedButton({
+          slotId,
+          primaryText = "How it works",
+          secondaryText = "2min",
+          icon = 'fa-solid fa-arrow-right'
+        }) {
+          return /*#__PURE__*/React.createElement(EditableButton, {
+            "data-slot-type": "SecondaryButton",
+            className: `
+        group 
+        border-2
+        h-12
+        rounded-2xl px-6 py-3
+        font-bold whitespace-nowrap text-base leading-5
+        transition-all duration-150
+        hover:bg-opacity-75 hover:bg-transparent
+        active:scale-95
+        disabled:opacity-50
+        2xl:text-base-flat 2xl:leading-5
+        cursor-pointer
+        border-surface-950
+      `
+          }, /*#__PURE__*/React.createElement("span", {
+            className: "flex items-center gap-3"
+          }, /*#__PURE__*/React.createElement(EditableIcon, {
+            className: 'relative group-hover:scale-125 transition-transform text-surface-950',
+            style: {
+              fontSize: '16px'
+            },
+            icon: icon,
+            propKey: `${slotId}_icon`
+          }), /*#__PURE__*/React.createElement("span", {
+            className: "flex items-center gap-1.5"
+          }, /*#__PURE__*/React.createElement(EditableText, {
+            propKey: `${slotId}_primaryText`,
+            className: ""
+          }, primaryText), /*#__PURE__*/React.createElement(EditableText, {
+            propKey: `${slotId}_secondaryText`,
+            className: "text-surface-500 font-medium"
+          }, secondaryText))));
+        }
+        ;
+        function FullRoundedStackedAvatars({
+          slotId,
+          numPeople = 8,
+          imageList = ['https://images.unsplash.com/photo-1535713875002-d1d0cf377fde', 'https://images.unsplash.com/photo-1740252117070-7aa2955b25f8', 'https://images.unsplash.com/photo-1740252117027-4275d3f84385', 'https://images.unsplash.com/photo-1624455806586-037944b1fa1a', 'https://images.unsplash.com/photo-1667840578978-9fe7fe5c0bc2', 'https://images.unsplash.com/photo-1678875947521-91356abd883d']
+        }) {
+          return /*#__PURE__*/React.createElement("div", {
+            "data-slot-type": "AvatarList",
+            className: "size-fit items-center z-10 flex -space-x-4 rtl:space-x-reverse "
+          }, imageList.map((url, index) => /*#__PURE__*/React.createElement(EditableImg, {
+            key: `${slotId}_imageList_${index}`,
+            propKey: `${slotId}_imageList_${index}`,
+            className: "size-10 rounded-full border-2 border-zinc-100 !border-solid",
+            src: url,
+            width: 40,
+            height: 40
+          })), /*#__PURE__*/React.createElement(EditableText, {
+            propKey: `${slotId}_numPeople`,
+            className: "flex size-10 items-center justify-center rounded-full !border-2 !border-zinc-100 bg-white !border-solid text-center text-xs font-medium text-black"
+          }, `+${numPeople}`));
+        }
+        ;
+        list.push( /*#__PURE__*/React.createElement(ErrorBoundary, {
+          key: "jvsNoqwOZDTL8WsaC1E5V"
+        }, /*#__PURE__*/React.createElement(HeroStackedContentMediaSocial, {
+          "background": {
+            "imageUrl": "https://cdn.wegic.ai/wegic-asset-store/data/image/V7RQUT0YK50O5WUY/origin"
+          },
+          "heroPrimaryHeadline": {
+            "weText": "Cung cấp",
+            "makeText": "tài liệu",
+            "advertisingText": "học tập",
+            "forText": "cho",
+            "theText": "mọi",
+            "newText": "người",
+            "emphasizedText": "kiến thức chuyên sâu"
+          },
+          "primaryDescription": {
+            "text": "Website của chúng tôi mang đến tài liệu học tập phong phú, bài viết chuyên sâu cùng phân tích giá trị về các vấn đề kinh tế và xã hội thực tế, hỗ trợ học tập hiệu quả hơn cho sinh viên và những người quan tâm."
+          },
+          "sticker": {
+            "image": "https://cdn.wegic.ai/assets/img/sticker/mood-star-modern-light.png",
+            "isRotate": true
+          },
+          "media": {
+            "image": "https://cdn.wegic.ai/assets/onepage/ai/image/e1cd2a08-0035-4755-9aa7-8fced4b6ef54.jpg?oldPrompt=A modern university classroom filled with students of different age groups, all studying together in a collaborative environment, with books, laptops, and a whiteboard visible, professional natural daylight photography using a full-frame DSLR camera, vibrant colors and sharp details&id=3555d7f2-a49d-4280-b31f-358a7ce24dd6"
+          },
+          "secondaryHeadline": {
+            "text": "Khám phá kho tư liệu học tập chất lượng"
+          },
+          "secondaryDescription": {
+            "text": "Hãy tham gia cùng chúng tôi để khám phá các bài viết, quyển sách và phân tích chuyên sâu, giúp bạn hiểu sâu hơn về tư tưởng kinh tế và xã hội thông qua góc nhìn lý luận Mác-Lênin."
+          },
+          "primaryButton": {
+            "textAttr": "link=&linkType=inner&query=pageId%3D1984163421623988226%26sectionId%3DkEeauZ7arjWeaB3vavvjE&text=Kh%C3%A1m%20ph%C3%A1%20ngay",
+            "icon": "fa-solid fa-graduation-cap"
+          },
+          "secondaryButton": {
+            "primaryText": "link=https%3A%2F%2Fwegic.ai&linkType=inner&query=pageId%3D1984163432843751426%26sectionId%3DuDYp6l9hsavtpMpGiVPoN&text=Xem%20th%C3%AAm",
+            "secondaryText": "2min",
+            "icon": "fa-solid fa-arrow-right"
+          },
+          "avatarList": {
+            "numPeople": 6,
+            "imageList": ["https://cdn.wegic.ai/assets/onepage/ai/image/9029b8ec-71ac-4d4c-a5d6-2e9987c5b216.jpg?oldPrompt=A portrait of a young student, with short black hair and wearing a casual shirt, smiling confidently, photographed against a blurred academic background, professional DSLR photography, sharp details and realistic colors&id=4f718861-eddc-4d0c-887c-ee1b469be0e3", "https://cdn.wegic.ai/assets/onepage/ai/image/85c3768f-754c-403e-aaff-481491330bb0.jpg?oldPrompt=A professional portrait of a young female student with long brown hair, wearing a formal outfit, smiling softly and looking straight at the camera, set against a blurred background of bookshelves, highly detailed, vibrant colors, and eye-level composition&id=05accc83-22ed-4b14-b73c-3e6ea055b53f", "https://cdn.wegic.ai/assets/onepage/ai/image/71071da8-b63c-425a-89dd-71df911bcae7.jpg?oldPrompt=A student with a curly hairstyle and a bright smile, wearing a casual hoodie, standing outdoors with greenery in the background, soft natural lighting, clear facial details captured with professional DSLR photography&id=e14ab472-d727-4fbd-99ad-b30dc4e0e781", "https://cdn.wegic.ai/assets/onepage/ai/image/4cf48254-0964-48a7-a07d-f31cf59abaa7.jpg?oldPrompt=A portrait of a serious-looking young male student wearing glasses and a clean formal shirt, photographed against a smooth gradient backdrop, deep focus and vibrant colors, eye-level composition with a full-frame DSLR camera&id=a13d8462-51df-4aea-b1bc-cb4392f2fd6d", "https://cdn.wegic.ai/assets/onepage/ai/image/891930e3-28f0-48e3-8cbf-eec648156856.jpg?oldPrompt=A cheerful female student wearing traditional Vietnamese áo dài, standing in a library while holding a textbook, surrounded by bookshelves, natural daylight lighting, detailed texture and colors&id=04918682-31aa-4560-8adf-64b2ba4f506e", "https://cdn.wegic.ai/assets/onepage/ai/image/b7b8ae68-19ba-42b9-894a-451d5fedb7e4.jpg?oldPrompt=A young male student with short black hair and a confident expression, wearing a casual T-shirt, leaning against a school hallway wall, softly blurred classroom background, sharp subject details, vibrant colors, and realistic tones&id=88362c1a-ff21-47d3-95e1-cd44bc46df19"]
+          },
+          key: "jvsNoqwOZDTL8WsaC1E5V"
+        })));
+      } catch (error) {}
+    }
+    {
+      function _extends() {
+        _extends = Object.assign ? Object.assign.bind() : function (target) {
+          for (var i = 1; i < arguments.length; i++) {
+            var source = arguments[i];
+            for (var key in source) {
+              if (Object.prototype.hasOwnProperty.call(source, key)) {
+                target[key] = source[key];
+              }
+            }
+          }
+          return target;
+        };
+        return _extends.apply(this, arguments);
+      }
+      try {
+        function FeatureStackedFeatureList({
+          primaryHeadline = {
+            "text": "Tài liệu kinh tế - xã hội",
+            "animationSpeed": 8
+          },
+          primaryDescription = {
+            "text": "Website này cung cấp tài liệu học tập, bài viết chuyên sâu và phân tích các vấn đề kinh tế - xã hội thực tế. Nội dung được thiết kế hướng tới sinh viên ngành kinh tế, chính trị, nhà nghiên cứu, giảng viên và những người quan tâm đến lý luận Mác-Lênin. Khám phá nguồn kiến thức đa dạng và phong phú ngay hôm nay!"
+          },
+          secondaryDescription = "Nền tảng tri thức vững chắc cho sinh viên và nhà nghiên cứu."
+        }) {
+          return /*#__PURE__*/React.createElement("div", {
+            className: "flex flex-col items-center py-20 md:py-32 px-6 md:px-12 lg:py-36 lg:px-20 w-full bg-white relative overflow-hidden",
+            "data-id": "K_4Tizgj5v8G1J68QqM-p"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "flex flex-col items-center gap-12 md:gap-16 lg:gap-20 w-full max-w-7xl z-10"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "flex flex-col justify-center items-center gap-5 w-full md:max-w-2xl"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "w-full text-center"
+          }, /*#__PURE__*/React.createElement(FullyGradientThinText, _extends({}, primaryHeadline, {
+            slotId: "primaryHeadline"
+          }), " ")), /*#__PURE__*/React.createElement("div", {
+            className: "w-full text-center"
+          }, /*#__PURE__*/React.createElement(DefaultDescription, _extends({}, primaryDescription, {
+            slotId: "primaryDescription"
+          }), " ")), /*#__PURE__*/React.createElement("p", {
+            className: "mt-2 text-sm font-medium text-gray-500 text-center"
+          }, /*#__PURE__*/React.createElement(EditableText, {
+            propKey: "secondaryDescription"
+          }, secondaryDescription)))));
+        }
+        function FullyGradientThinText({
+          text = "Hello",
+          animationSpeed = 8,
+          slotId = 'FullyGradientThinText'
+        }) {
+          const gradientStyle = {
+            animation: `gradient ${animationSpeed}s linear infinite`
+          };
+          return /*#__PURE__*/React.createElement("h2", {
+            "data-slot-type": "PrimaryHeadline",
+            className: "relative flex flex-row font-light leading-[1.2] tracking-tight"
+          }, /*#__PURE__*/React.createElement(EditableText, {
+            className: "relative z-2 w-full text-transparent bg-gradient-to-r from-blue-500 to-support-300 bg-cover animate-gradient md:text-[2.5rem] text-[1.75rem]",
+            style: {
+              ...gradientStyle,
+              backgroundClip: "text",
+              WebkitBackgroundClip: "text",
+              backgroundSize: "300% 100%"
+            },
+            propKey: `${slotId}_text`
+          }, text), /*#__PURE__*/React.createElement("style", null, `
+        @keyframes gradient {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+      `));
+        }
+        ;
+        function DefaultDescription({
+          slotId,
+          text = 'Hello'
+        }) {
+          return /*#__PURE__*/React.createElement(EditableText, {
+            "data-slot-type": "PrimaryDescription",
+            className: `text-sm font-normal md:text-base text-surface-500`,
+            propKey: `${slotId}_text`
+          }, text);
+        }
+        ;
+        function ResourceCardList({
+          slotId,
+          list = [{
+            name: 'Featured Studios',
+            items: [{
+              title: 'Creative Design Studio',
+              description: 'Premium branding and visual identity services',
+              imageUrl: 'https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+              url: 'https://www.creativestudio.com'
+            }, {
+              title: 'Digital Design Agency',
+              description: 'Modern web and mobile app design solutions',
+              imageUrl: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+              url: 'https://www.digitalagency.com'
+            }, {
+              title: 'Brand Studio Pro',
+              description: 'Comprehensive brand strategy and design',
+              imageUrl: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+              url: 'https://www.brandstudiopro.com'
+            }, {
+              title: 'Minimal Design Co',
+              description: 'Clean and minimalist design solutions',
+              imageUrl: 'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+              url: 'https://www.minimaldesign.co'
+            }, {
+              title: 'Studio Innovate',
+              description: 'Cutting-edge design and innovation studio',
+              imageUrl: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+              url: 'https://www.studioinnovate.com'
+            }, {
+              title: 'Pixel Perfect Studio',
+              description: 'Precision design for digital experiences',
+              imageUrl: 'https://images.unsplash.com/photo-1558655146-364adaf1fcc9?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+              url: 'https://www.pixelperfect.studio'
+            }]
+          }, {
+            name: 'Tools & Resources',
+            items: [{
+              title: 'Design Tools Hub',
+              description: 'Essential software and resources for designers',
+              imageUrl: 'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+              url: 'https://www.designtools.com'
+            }, {
+              title: 'Creative Assets Library',
+              description: 'Premium fonts, icons and design resources',
+              imageUrl: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+              url: 'https://www.creativeassets.com'
+            }, {
+              title: 'Color Palette Generator',
+              description: 'AI-powered color scheme creation tool',
+              imageUrl: 'https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+              url: 'https://www.colorpalette.ai'
+            }, {
+              title: 'Typography Foundry',
+              description: 'Curated collection of premium typefaces',
+              imageUrl: 'https://images.unsplash.com/photo-1518716159603-42c0fb1b8ead?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+              url: 'https://www.typographyfoundry.com'
+            }, {
+              title: 'Stock Photo Studio',
+              description: 'High-quality images for creative projects',
+              imageUrl: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+              url: 'https://www.stockphoto.studio'
+            }, {
+              title: 'Mockup Generator',
+              description: 'Professional mockups for design presentations',
+              imageUrl: 'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+              url: 'https://www.mockupgen.com'
+            }, {
+              title: 'Design System Builder',
+              description: 'Create consistent design systems effortlessly',
+              imageUrl: 'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+              url: 'https://www.designsystem.builder'
+            }]
+          }, {
+            name: 'Industry Insights',
+            items: [{
+              title: 'Design Trends Blog',
+              description: 'Latest insights and trends in design industry',
+              imageUrl: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+              url: 'https://www.designtrends.com'
+            }, {
+              title: 'Creative Weekly',
+              description: 'Weekly newsletter for design professionals',
+              imageUrl: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+              url: 'https://www.creativeweekly.com'
+            }, {
+              title: 'Design Leadership',
+              description: 'Management and strategy for design teams',
+              imageUrl: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+              url: 'https://www.designleadership.com'
+            }, {
+              title: 'UX Research Hub',
+              description: 'User experience research and methodologies',
+              imageUrl: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+              url: 'https://www.uxresearch.hub'
+            }, {
+              title: 'Design Case Studies',
+              description: 'In-depth analysis of successful design projects',
+              imageUrl: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+              url: 'https://www.designcases.com'
+            }]
+          }]
+        }) {
+          const [activeIndex, setActiveIndex] = React.useState(0);
+          const handleTabClick = index => {
+            setActiveIndex(index);
+          };
+          const activeCategory = list[activeIndex];
+          const activeItems = (activeCategory === null || activeCategory === void 0 ? void 0 : activeCategory.items) || [];
+          return /*#__PURE__*/React.createElement("div", {
+            className: "w-full grid grid-cols-1 gap-8 lg:grid-cols-4",
+            "data-slot-type": "CategoriesCardList"
+          }, /*#__PURE__*/React.createElement("nav", {
+            className: "space-y-1 lg:col-span-1"
+          }, list.map((category, index) => /*#__PURE__*/React.createElement("div", {
+            key: index,
+            onClick: () => handleTabClick(index),
+            className: `${activeIndex === index ? 'bg-surface-100 text-surface-950 shadow-md' : 'bg-surface-50 text-surface-500 shadow-sm'} hover:bg-surface-100 hover:text-surface-950 hover:shadow-md transition-all duration-300 ease-in-out group cursor-pointer flex items-center px-4 py-3 text-base font-medium rounded-3xl h-12`
+          }, /*#__PURE__*/React.createElement(EditableText, {
+            propKey: `${slotId}_list_${index}_name`,
+            className: "truncate"
+          }, category.name), /*#__PURE__*/React.createElement("span", {
+            className: `${activeIndex === index ? 'bg-white text-surface-950' : 'bg-surface-50 text-surface-500'} group-hover:bg-white transition-all ml-auto inline-block py-0.5 px-3 text-xs rounded-full`
+          }, category.items.length.toString())))), /*#__PURE__*/React.createElement(motion.div, {
+            key: activeIndex,
+            initial: {
+              opacity: 0,
+              y: 20
+            },
+            animate: {
+              opacity: 1,
+              y: 0
+            },
+            transition: {
+              duration: 0.5
+            },
+            className: "lg:col-span-3 grid grid-cols-1 gap-x-5 sm:grid-cols-2 lg:grid-cols-3"
+          }, activeItems.map((resource, index) => /*#__PURE__*/React.createElement(motion.div, {
+            key: `${activeIndex}_${index}`,
+            initial: {
+              opacity: 0,
+              y: 20
+            },
+            animate: {
+              opacity: 1,
+              y: 0
+            },
+            transition: {
+              duration: 0.5,
+              delay: index * 0.1
+            }
+          }, /*#__PURE__*/React.createElement(EditableButton, {
+            propKey: `${slotId}_list_${activeIndex}_items_${index}_url`,
+            url: resource.url,
+            className: "transition-all relative group border-b border-[rgba(0,0,0,0.08)] flex max-w-full w-full h-full items-center px-6 py-5 hover:bg-surface-50 hover:rounded-3xl"
+          }, /*#__PURE__*/React.createElement(EditableImg, {
+            propKey: `${slotId}_list_${activeIndex}_items_${index}_imageUrl`,
+            src: resource.imageUrl,
+            alt: "icon",
+            className: "w-10 h-10 rounded-md mr-4 group-hover:scale-[1.3] group-hover:rounded-lg transition-all flex-shrink-0"
+          }), /*#__PURE__*/React.createElement("div", {
+            className: "flex flex-col text-left flex-1 min-w-0"
+          }, /*#__PURE__*/React.createElement(EditableText, {
+            propKey: `${slotId}_list_${activeIndex}_items_${index}_title`,
+            className: "group-hover:text-blue-500 transition-all flex items-center text-base mb-1 text-surface-950 font-medium truncate"
+          }, resource.title), /*#__PURE__*/React.createElement(EditableText, {
+            propKey: `${slotId}_list_${activeIndex}_items_${index}_description`,
+            className: "text-base group-hover:text-surface-950 transition-all text-surface-500 line-clamp-2"
+          }, resource.description)))))));
+        }
+        list.push( /*#__PURE__*/React.createElement(ErrorBoundary, {
+          key: "K_4Tizgj5v8G1J68QqM-p"
+        }, /*#__PURE__*/React.createElement(FeatureStackedFeatureList, {
+          "primaryHeadline": {
+            "text": "Tài liệu kinh tế - xã hội",
+            "animationSpeed": 8
+          },
+          "primaryDescription": {
+            "text": "Website này cung cấp tài liệu học tập, bài viết chuyên sâu và phân tích các vấn đề kinh tế - xã hội thực tế. Nội dung được thiết kế hướng tới sinh viên ngành kinh tế, chính trị, nhà nghiên cứu, giảng viên và những người quan tâm đến lý luận Mác-Lênin. Khám phá nguồn kiến thức đa dạng và phong phú ngay hôm nay!"
+          },
+          "secondaryDescription": "Nền tảng tri thức vững chắc cho sinh viên và nhà nghiên cứu.",
+          key: "K_4Tizgj5v8G1J68QqM-p"
+        })));
+      } catch (error) {}
+    }
+    {
+      function _extends() {
+        _extends = Object.assign ? Object.assign.bind() : function (target) {
+          for (var i = 1; i < arguments.length; i++) {
+            var source = arguments[i];
+            for (var key in source) {
+              if (Object.prototype.hasOwnProperty.call(source, key)) {
+                target[key] = source[key];
+              }
+            }
+          }
+          return target;
+        };
+        return _extends.apply(this, arguments);
+      }
+      try {
+        function BlogGridStackedCardList({
+          primaryHeadline,
+          primaryButton,
+          blogCardList
+        }) {
+          return /*#__PURE__*/React.createElement("div", {
+            className: "flex flex-col items-center justify-center w-full px-6 md:px-12 lg:px-20 pt-16 pb-16 md:pt-20 md:pb-20 lg:pt-20 lg:pb-20",
+            "data-id": "10LyIYJh977MwFUGbFMwV"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "w-full mx-auto flex flex-col items-center gap-12 max-w-7xl md:gap-16 lg:gap-20"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "flex flex-col justify-center items-center gap-6 self-stretch md:flex-row md:justify-between md:items-start md:gap-0"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "flex max-w-2xl justify-center items-center gap-2 text-center md:text-left md:justify-start md:flex-[1_0_0]"
+          }, /*#__PURE__*/React.createElement(TwoTierHeadline, _extends({}, primaryHeadline, {
+            slotId: "primaryHeadline"
+          }), " ")), /*#__PURE__*/React.createElement("div", {
+            className: "flex flex-col items-start gap-2 md:pl-20"
+          }, /*#__PURE__*/React.createElement(Subtle3DLayeringGradientButton, _extends({}, primaryButton, {
+            slotId: "primaryButton"
+          }), " "))), /*#__PURE__*/React.createElement("div", {
+            className: "flex items-center w-full gap-2 md:max-w-7xl md:flex-col md:justify-center"
+          }, /*#__PURE__*/React.createElement(BlogCardWithImageAndCategoryBadge, _extends({}, blogCardList, {
+            slotId: "blogCardList"
+          }), " "))));
+        }
+        function TwoTierHeadline({
+          slotId,
+          primaryText = "Designer specializing in",
+          secondaryText = "Brand + Digital Design"
+        }) {
+          return /*#__PURE__*/React.createElement("h2", {
+            className: "text-[28px] md:text-[40px] lg:text-[40px] font-light flex flex-col leading-[1.2] tracking-tight",
+            "data-slot-type": "PrimaryHeadline"
+          }, /*#__PURE__*/React.createElement(EditableText, {
+            propKey: `${slotId}_primaryText`,
+            className: "leading-normal font-medium text-gray-950"
+          }, primaryText), /*#__PURE__*/React.createElement(EditableText, {
+            propKey: `${slotId}_secondaryText`,
+            className: "font-medium text-gray-400"
+          }, secondaryText));
+        }
+        function Subtle3DLayeringGradientButton({
+          textAttr = 'Go to Home',
+          icon = 'fa-brands fa-apple',
+          slotId = 'Subtle3DLayeringGradientButton'
+        }) {
+          return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(EditableButton, {
+            "data-slot-type": "PrimaryButton",
+            className: " relative inline-flex cursor-pointer items-center justify-center gap-3  whitespace-nowrap font-semibold text-base rounded-2xl px-6 h-12 text-white bg-blue-500 transition-all duration-300 transform-gpu active:opacity-75 active:scale-[0.9] hover:bg-blue-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring  aria-disabled:pointer-events-none aria-disabled:opacity-50 before:content-[''] before:absolute before:inset-0 before:rounded-2xl before:bg-gradient-to-b before:from-white/30 before:to-white/0 before:mix-blend-soft-light before:transition-opacity before:duration-300 hover:before:opacity-50 shadow-lg shadow-[inset_0_0_0_1px_rgba(0,0,0,0.15)] group "
+          }, /*#__PURE__*/React.createElement(EditableIcon, {
+            propKey: `${slotId}_icon`,
+            icon: icon,
+            className: "text-white flex items-center"
+          }), /*#__PURE__*/React.createElement("div", {
+            className: "relative overflow-hidden h-6 flex items-center"
+          }, /*#__PURE__*/React.createElement(EditableText, {
+            propKey: `${slotId}_textAttr`,
+            className: "text-white transition-transform duration-300 ease-in-out group-hover:-translate-y-full"
+          }, textAttr), /*#__PURE__*/React.createElement(EditableText, {
+            propKey: `${slotId}_textAttr`,
+            className: "text-white left-0 top-full transition-transform duration-300 ease-in-out group-hover:-translate-y-full",
+            style: {
+              position: 'absolute'
+            }
+          }, textAttr))));
+        }
+        ;
+        function BlogCardWithImageAndCategoryBadge({
+          slotId,
+          list = [{
+            imageUrl: 'https://images.unsplash.com/photo-1658604663578-04634f4cb897?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            category: 'Art & Design',
+            date: 'March 15, 2023',
+            titleAttr: 'text=Unleashing Creativity in Modern Art',
+            linkTextAttr: 'text=Continue Reading&link=/',
+            linkIcon: 'fa-solid fa-arrow-right'
+          }, {
+            imageUrl: 'https://images.unsplash.com/photo-1658604663578-04634f4cb897?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            category: 'Tech Innovations',
+            date: 'March 20, 2023',
+            titleAttr: 'text=The Intersection of Technology and Design',
+            linkTextAttr: 'text=Continue Reading&link=/',
+            linkIcon: 'fa-solid fa-arrow-right'
+          }, {
+            imageUrl: 'https://images.unsplash.com/photo-1658604663578-04634f4cb897?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            category: 'Strategy',
+            date: 'March 25, 2023',
+            titleAttr: 'text=Strategic Design for Business Growth',
+            linkTextAttr: 'text=Continue Reading&link=/',
+            linkIcon: 'fa-solid fa-arrow-right'
+          }]
+        }) {
+          return /*#__PURE__*/React.createElement("div", {
+            className: "w-full grid grid-cols-[repeat(auto-fit,minmax(18.75rem,1fr))] gap-12 justify-center"
+          }, list.map((post, index) => /*#__PURE__*/React.createElement(motion.div, {
+            key: index,
+            initial: {
+              opacity: 0,
+              y: 20
+            },
+            animate: {
+              opacity: 1,
+              y: 0
+            },
+            transition: {
+              duration: 0.6,
+              delay: index * 0.1
+            },
+            className: "group flex-1"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "relative block overflow-hidden rounded-3xl"
+          }, /*#__PURE__*/React.createElement(EditableImg, {
+            propKey: `${slotId}_list_${index}_imageUrl`,
+            className: "object-cover w-full h-full aspect-[1/1] transition-transform duration-200 group-hover:scale-110",
+            src: post.imageUrl,
+            alt: post.category
+          }), /*#__PURE__*/React.createElement("span", {
+            className: "absolute left-3 top-3 px-3 py-2 text-xs font-bold tracking-widest text-surface-950 uppercase bg-white rounded-xl"
+          }, /*#__PURE__*/React.createElement(EditableText, {
+            propKey: `${slotId}_list_${index}_category`
+          }, post.category))), /*#__PURE__*/React.createElement(EditableText, {
+            propKey: `${slotId}_list_${index}_date`,
+            className: "mt-6 text-base font-medium text-surface-500 dark:text-surface-500"
+          }, post.date), /*#__PURE__*/React.createElement(EditableButton, {
+            className: "mt-4 text-base lg:text-xl md:text-xl sm:text-base text-left font-semibold text-surface-950 dark:text-surface-200 hover:text-blue-500 dark:hover:text-white"
+          }, /*#__PURE__*/React.createElement(EditableText, {
+            propKey: `${slotId}_list_${index}_titleAttr`
+          }, post.titleAttr)), /*#__PURE__*/React.createElement("div", {
+            className: "mt-6"
+          }, /*#__PURE__*/React.createElement(EditableButton, {
+            className: "inline-flex items-center pb-2 text-sm font-bold tracking-widest text-surface-950 uppercase border-black/10 dark:border-white/10 group hover:text-blue-500 dark:hover:text-white dark:text-surface-200"
+          }, /*#__PURE__*/React.createElement(EditableText, {
+            propKey: `${slotId}_list_${index}_linkTextAttr`
+          }, post.linkTextAttr), /*#__PURE__*/React.createElement(EditableIcon, {
+            propKey: `${slotId}_list_${index}_linkIcon`,
+            icon: post.linkIcon,
+            iconLibrary: "FontAwesome",
+            className: "ml-2 transition-transform duration-200 group-hover:translate-x-1"
+          }))))));
+        }
+        list.push( /*#__PURE__*/React.createElement(ErrorBoundary, {
+          key: "10LyIYJh977MwFUGbFMwV"
+        }, /*#__PURE__*/React.createElement(BlogGridStackedCardList, {
+          "primaryHeadline": {
+            "primaryText": "Phân tích chuyên sâu",
+            "secondaryText": "Lý luận Mác-Lênin"
+          },
+          "primaryButton": {
+            "textAttr": "link=https%3A%2F%2Fwegic.ai&linkType=inner&query=pageId%3D1984163432843751426%26sectionId%3D-aL3bhnofhju9YBlOUMcF&text=%C4%90%E1%BB%8Dc%20th%C3%AAm",
+            "icon": "fa-solid fa-arrow-right"
+          },
+          "blogCardList": {
+            "list": [{
+              "imageUrl": "https://cdn.wegic.ai/assets/onepage/ai/image/ba3d5c92-7a31-4b59-81b0-b6ca8f3ce2a2.jpg?oldPrompt=A thought-provoking scene depicting the essence of Marxism, philosophy, and theory, [an open book with pages filled with complex equations and philosophical concepts], set against a backdrop of [a dimly lit study with shelves overflowing with ancient texts], soft, natural daylight, professional full-frame DSLR camera, wide aperture (f/5.6), low ISO (ISO 400), fast shutter speed (1/500s), eye-level composition, deep, rich colors; sharp, crisp textures; pronounced subject-background separation&id=01deeef2-6b02-4478-baa6-9a305c9284b4",
+              "category": "Triết học Mác-Lênin",
+              "date": "Ngày 15 tháng 3, 2023",
+              "titleAttr": "text=Vai trò của triết học trong đời sống xã hội",
+              "linkTextAttr": "link=https%3A%2F%2Fluatminhkhue.vn%2Fvai-tro-cua-triet-hoc-trong-doi-song-xa-hoi.aspx&linkType=external&target=_blank&text=Ti%E1%BA%BFp%20t%E1%BB%A5c%20%C4%91%E1%BB%8Dc",
+              "linkIcon": "fa-solid fa-arrow-right"
+            }, {
+              "imageUrl": "https://cdn.wegic.ai/assets/onepage/ai/image/2bf2be25-fd14-4902-a7c7-e5e4c951e4dc.jpg?oldPrompt=An engaging visual representing political economy and analysis, [a graph showing economic trends overlaid on a map of the world], placed in [a modern office setting with large windows overlooking a bustling city], soft, natural daylight, professional full-frame DSLR camera, wide aperture (f/5.6), low ISO (ISO 400), fast shutter speed (1/500s), eye-level composition, deep, rich colors; sharp, crisp textures; pronounced subject-background separation&id=c0b63465-7d2e-421c-b821-2e1fb07294b1",
+              "category": "Kinh tế chính trị",
+              "date": "Ngày 20 tháng 4, 2023",
+              "titleAttr": "text=Phân tích kinh tế chính trị hiện đại",
+              "linkTextAttr": "link=https%3A%2F%2Flyluanchinhtri.vn%2Fnghien-cuu-ly-thuyet-chinh-tri-hien-dai-tai-viet-nam-hien-nay-2085.html&linkType=external&target=_blank&text=Ti%E1%BA%BFp%20t%E1%BB%A5c%20%C4%91%E1%BB%8Dc",
+              "linkIcon": "fa-solid fa-arrow-right"
+            }, {
+              "imageUrl": "https://cdn.wegic.ai/assets/onepage/ai/image/cf353565-f145-4e59-81bf-6e3d6816fe0a.jpg?oldPrompt=A historical depiction of socialism, development, and history, [a group of people working together in a community garden, symbolizing collective effort and progress], set within [a vibrant, multicultural community with colorful buildings and lush greenery], soft, natural daylight, professional full-frame DSLR camera, wide aperture (f/5.6), low ISO (ISO 400), fast shutter speed (1/500s), eye-level composition, deep, rich colors; sharp, crisp textures; pronounced subject-background separation&id=5168c7ae-cc6a-42a2-b251-b29e48c9a74d",
+              "category": "Chủ nghĩa xã hội khoa học",
+              "date": "Ngày 25 tháng 5, 2023",
+              "titleAttr": "text=Lịch sử và phát triển chủ nghĩa xã hội",
+              "linkTextAttr": "link=https%3A%2F%2Fhvctcand.bocongan.gov.vn%2Fllct-xdll-cand%2Fly-luan-chinh-tri%2Fchu-nghia-xa-hoi-mot-tat-yeu-cua-lich-su-the-gioi-3738&linkType=external&target=_blank&text=Ti%E1%BA%BFp%20t%E1%BB%A5c%20%C4%91%E1%BB%8Dc",
+              "linkIcon": "fa-solid fa-arrow-right"
+            }]
+          },
+          key: "10LyIYJh977MwFUGbFMwV"
+        })));
+      } catch (error) {}
+    }
+    {
+      function _extends() {
+        _extends = Object.assign ? Object.assign.bind() : function (target) {
+          for (var i = 1; i < arguments.length; i++) {
+            var source = arguments[i];
+            for (var key in source) {
+              if (Object.prototype.hasOwnProperty.call(source, key)) {
+                target[key] = source[key];
+              }
+            }
+          }
+          return target;
+        };
+        return _extends.apply(this, arguments);
+      }
+      try {
+        function Contact_04({
+          formProps = [{
+            "type": "text",
+            "label": "Họ và tên",
+            "placeholder": "Nhập họ và tên của bạn",
+            "id": "1984163425562374145"
+          }, {
+            "type": "email",
+            "label": "Email",
+            "placeholder": "Nhập địa chỉ email của bạn",
+            "id": "1984163425562374145"
+          }, {
+            "type": "text",
+            "label": "Chủ đề",
+            "placeholder": "Chủ đề bạn muốn gửi đi",
+            "id": "1984163425562374145"
+          }, {
+            "type": "textarea",
+            "label": "Nội dung",
+            "placeholder": "Nhập nội dung góp ý hoặc câu hỏi của bạn",
+            "id": "1984163425562374145"
+          }, {
+            "type": "submit",
+            "textAttr": "text=Gửi phản hồi&link=",
+            "id": "1984163425562374145"
+          }],
+          offices = [{
+            "title": "Văn phòng Hà Nội",
+            "description": "Kết nối với đội ngũ chuyên gia tại Hà Nội.",
+            "address": "Số 12, Đường Nguyễn Tri Phương, Hà Nội, Việt Nam",
+            "email": "hanoi@lyluanmacle.vn",
+            "locationIcon": "fa-solid fa-location-dot",
+            "emailIcon": "fa-solid fa-envelope"
+          }, {
+            "title": "Văn phòng TP. Hồ Chí Minh",
+            "description": "Kết nối với đội ngũ chuyên gia tại TP. Hồ Chí Minh.",
+            "address": "Số 45, Đường Nguyễn Huệ, TP. Hồ Chí Minh, Việt Nam",
+            "email": "hcmc@lyluanmacle.vn",
+            "locationIcon": "fa-solid fa-location-dot",
+            "emailIcon": "fa-solid fa-envelope"
+          }, {
+            "title": "Văn phòng Đà Nẵng",
+            "description": "Kết nối với đội ngũ chuyên gia tại Đà Nẵng.",
+            "address": "Số 78, Đường Lê Duẩn, TP. Đà Nẵng, Việt Nam",
+            "email": "danang@lyluanmacle.vn",
+            "locationIcon": "fa-solid fa-location-dot",
+            "emailIcon": "fa-solid fa-envelope"
+          }]
+        }) {
+          return /*#__PURE__*/React.createElement("section", {
+            className: "relative w-full bg-white dark:bg-black pt-16 pb-16 md:pt-20 md:pb-20 lg:pt-20 lg:pb-20",
+            "data-id": "kEeauZ7arjWeaB3vavvjE"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "sm:w-full md:w-[60%] max-w-4xl mx-auto mb-24 rounded-2xl overflow-hidden"
+          }, /*#__PURE__*/React.createElement(EditableForm, _extends({
+            propKey: "formProps_0"
+          }, formProps[0]))), /*#__PURE__*/React.createElement("div", {
+            className: "grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto"
+          }, offices.map((office, index) => /*#__PURE__*/React.createElement(AnimateInView, {
+            key: index,
+            type: "rise"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "flex flex-col"
+          }, /*#__PURE__*/React.createElement("h3", {
+            className: "text-2xl font-bold mb-2"
+          }, /*#__PURE__*/React.createElement(EditableText, {
+            propKey: `offices_${index}_title`
+          }, office.title)), /*#__PURE__*/React.createElement("p", {
+            className: "text-gray-500 mb-8"
+          }, /*#__PURE__*/React.createElement(EditableText, {
+            propKey: `offices_${index}_description`
+          }, office.description)), /*#__PURE__*/React.createElement("div", {
+            className: "flex items-start mb-4"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "mr-2 mt-1"
+          }, /*#__PURE__*/React.createElement(EditableIcon, {
+            propKey: `offices_${index}_locationIcon`,
+            icon: office.locationIcon,
+            iconLibrary: "FontAwesome"
+          })), /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement(EditableText, {
+            propKey: `offices_${index}_address`
+          }, office.address))), /*#__PURE__*/React.createElement("div", {
+            className: "flex items-center"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "mr-2"
+          }, /*#__PURE__*/React.createElement(EditableIcon, {
+            propKey: `offices_${index}_emailIcon`,
+            icon: office.emailIcon,
+            iconLibrary: "FontAwesome"
+          })), /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement(EditableText, {
+            propKey: `offices_${index}_email`
+          }, office.email)))))))));
+        }
+        list.push( /*#__PURE__*/React.createElement(ErrorBoundary, {
+          key: "kEeauZ7arjWeaB3vavvjE"
+        }, /*#__PURE__*/React.createElement(Contact_04, {
+          "formProps": [{
+            "type": "text",
+            "label": "Họ và tên",
+            "placeholder": "Nhập họ và tên của bạn",
+            "id": "1984163425562374145"
+          }, {
+            "type": "email",
+            "label": "Email",
+            "placeholder": "Nhập địa chỉ email của bạn",
+            "id": "1984163425562374145"
+          }, {
+            "type": "text",
+            "label": "Chủ đề",
+            "placeholder": "Chủ đề bạn muốn gửi đi",
+            "id": "1984163425562374145"
+          }, {
+            "type": "textarea",
+            "label": "Nội dung",
+            "placeholder": "Nhập nội dung góp ý hoặc câu hỏi của bạn",
+            "id": "1984163425562374145"
+          }, {
+            "type": "submit",
+            "textAttr": "text=Gửi phản hồi&link=",
+            "id": "1984163425562374145"
+          }],
+          "offices": [{
+            "title": "Văn phòng Hà Nội",
+            "description": "Kết nối với đội ngũ chuyên gia tại Hà Nội.",
+            "address": "Số 12, Đường Nguyễn Tri Phương, Hà Nội, Việt Nam",
+            "email": "hanoi@lyluanmacle.vn",
+            "locationIcon": "fa-solid fa-location-dot",
+            "emailIcon": "fa-solid fa-envelope"
+          }, {
+            "title": "Văn phòng TP. Hồ Chí Minh",
+            "description": "Kết nối với đội ngũ chuyên gia tại TP. Hồ Chí Minh.",
+            "address": "Số 45, Đường Nguyễn Huệ, TP. Hồ Chí Minh, Việt Nam",
+            "email": "hcmc@lyluanmacle.vn",
+            "locationIcon": "fa-solid fa-location-dot",
+            "emailIcon": "fa-solid fa-envelope"
+          }, {
+            "title": "Văn phòng Đà Nẵng",
+            "description": "Kết nối với đội ngũ chuyên gia tại Đà Nẵng.",
+            "address": "Số 78, Đường Lê Duẩn, TP. Đà Nẵng, Việt Nam",
+            "email": "danang@lyluanmacle.vn",
+            "locationIcon": "fa-solid fa-location-dot",
+            "emailIcon": "fa-solid fa-envelope"
+          }],
+          key: "kEeauZ7arjWeaB3vavvjE"
+        })));
+      } catch (error) {}
+    }
+    routerList.push({
+      path: "home",
+      element: /*#__PURE__*/React.createElement(Layout, null, list)
+    });
+  }
+  {
+    const list = [];
+    {
+      function _extends() {
+        _extends = Object.assign ? Object.assign.bind() : function (target) {
+          for (var i = 1; i < arguments.length; i++) {
+            var source = arguments[i];
+            for (var key in source) {
+              if (Object.prototype.hasOwnProperty.call(source, key)) {
+                target[key] = source[key];
+              }
+            }
+          }
+          return target;
+        };
+        return _extends.apply(this, arguments);
+      }
+      try {
+        function HeaderSplitCenterTitleGraphic({
+          background,
+          image,
+          primaryHeadline,
+          primaryDescription
+        }) {
+          return /*#__PURE__*/React.createElement("div", {
+            className: "w-full flex items-center justify-center py-20 px-6 md:py-32 md:px-12 lg:py-36 lg:px-32 relative",
+            "data-id": "XiACHS24PhZ_uJw91Dq69"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "absolute z-0 size-full inset-0"
+          }, /*#__PURE__*/React.createElement(ImageBackground, _extends({}, background, {
+            slotId: "background"
+          }), " ")), /*#__PURE__*/React.createElement("div", {
+            className: "w-full max-w-7xl mx-auto flex flex-col items-center justify-center gap-10 z-10 relative"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "flex w-80 h-60 aspect-[4/3] rounded-3xl overflow-hidden object-cover items-center justify-center"
+          }, /*#__PURE__*/React.createElement(BasicImage, _extends({}, image, {
+            slotId: "image"
+          }), " ")), /*#__PURE__*/React.createElement("div", {
+            className: "w-full mx-auto flex justify-center items-center text-center max-w-2xl"
+          }, /*#__PURE__*/React.createElement(TwoTierHeadline, _extends({}, primaryHeadline, {
+            slotId: "primaryHeadline"
+          }), " ")), /*#__PURE__*/React.createElement("div", {
+            className: "w-full mx-auto flex justify-center items-center text-center max-w-2xl"
+          }, /*#__PURE__*/React.createElement(DefaultDescription, _extends({}, primaryDescription, {
+            slotId: "primaryDescription"
+          }), " "))));
+        }
+        function ImageBackground({
+          slotId,
+          imageUrl = 'https://img.js.design/assets/img/68463fc6d3edcee12aed1c80.png'
+        }) {
+          return /*#__PURE__*/React.createElement("div", {
+            "data-slot-type": "ImageBackground",
+            className: "size-full bg-cover bg-center"
+          }, /*#__PURE__*/React.createElement(EditableImg, {
+            isFCP: true,
+            propKey: `${slotId}_imageUrl`,
+            src: imageUrl,
+            className: "size-full object-cover"
+          }));
+        }
+        function BasicImage({
+          slotId,
+          image = 'https://images.unsplash.com/photo-1749330513873-09ffa91b0aae?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0'
+        }) {
+          return /*#__PURE__*/React.createElement(EditableImg, {
+            className: "w-full h-full object-cover",
+            src: image,
+            propKey: `${slotId}_image`,
+            "data-slot-type": "Image"
+          });
+        }
+        function TwoTierHeadline({
+          slotId,
+          primaryText = "Designer specializing in",
+          secondaryText = "Brand + Digital Design"
+        }) {
+          return /*#__PURE__*/React.createElement("h2", {
+            className: "text-[28px] md:text-[40px] lg:text-[40px] font-light flex flex-col leading-[1.2] tracking-tight",
+            "data-slot-type": "PrimaryHeadline"
+          }, /*#__PURE__*/React.createElement(EditableText, {
+            propKey: `${slotId}_primaryText`,
+            className: "leading-normal font-medium text-gray-950"
+          }, primaryText), /*#__PURE__*/React.createElement(EditableText, {
+            propKey: `${slotId}_secondaryText`,
+            className: "font-medium text-gray-400"
+          }, secondaryText));
+        }
+        function DefaultDescription({
+          slotId,
+          text = 'Hello'
+        }) {
+          return /*#__PURE__*/React.createElement(EditableText, {
+            "data-slot-type": "PrimaryDescription",
+            className: `text-sm font-normal md:text-base text-surface-500`,
+            propKey: `${slotId}_text`
+          }, text);
+        }
+        ;
+        list.push( /*#__PURE__*/React.createElement(ErrorBoundary, {
+          key: "XiACHS24PhZ_uJw91Dq69"
+        }, /*#__PURE__*/React.createElement(HeaderSplitCenterTitleGraphic, {
+          "background": {
+            "imageUrl": "https://cdn.wegic.ai/wegic-asset-store/data/image/50HY18NJFRYLJDW7/origin"
+          },
+          "image": {
+            "image": "https://cdn.wegic.ai/assets/onepage/ai/image/d36a4819-9b55-498b-b186-cf054a2c3f4f.jpg?oldPrompt=A collection of educational materials spread on a wooden desk, including open books, notebooks, and research papers, captured in a professional, well-lit indoor environment, with a scholarly atmosphere, representing academic study and research&id=9c9a49ba-4554-4c4c-82ff-52f8b4bbdb8f"
+          },
+          "primaryHeadline": {
+            "primaryText": "Khám phá tài liệu học tập và bài viết chuyên sâu",
+            "secondaryText": "Nâng tầm kiến thức kinh tế - xã hội cùng chúng tôi"
+          },
+          "primaryDescription": {
+            "text": "Website cung cấp tài liệu học tập, bài viết chuyên sâu và phân tích các vấn đề kinh tế - xã hội thực tế, phục vụ sinh viên, nhà nghiên cứu và những người quan tâm."
+          },
+          key: "XiACHS24PhZ_uJw91Dq69"
+        })));
+      } catch (error) {}
+    }
+    {
+      function _extends() {
+        _extends = Object.assign ? Object.assign.bind() : function (target) {
+          for (var i = 1; i < arguments.length; i++) {
+            var source = arguments[i];
+            for (var key in source) {
+              if (Object.prototype.hasOwnProperty.call(source, key)) {
+                target[key] = source[key];
+              }
+            }
+          }
+          return target;
+        };
+        return _extends.apply(this, arguments);
+      }
+      try {
+        function CategoriesCenteredIconGridText({
+          background,
+          primaryHeadline,
+          primaryDescription,
+          categoriesCardList
+        }) {
+          return /*#__PURE__*/React.createElement("div", {
+            className: " flex flex-col items-center justify-center py-20 px-6 md:py-32 md:px-12 lg:py-36 lg:px-20 w-full relative ",
+            "data-id": "-aL3bhnofhju9YBlOUMcF"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "absolute inset-0 z-0"
+          }, /*#__PURE__*/React.createElement(ImageBackground, _extends({}, background, {
+            slotId: "background"
+          }), " ")), /*#__PURE__*/React.createElement("div", {
+            className: " flex flex-col items-center max-w-7xl w-full z-10 lg:gap-20 md:gap-16 gap-12 "
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "flex flex-col lg:items-start items-center gap-5 lg:text-left text-center w-full"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "max-w-2xl"
+          }, /*#__PURE__*/React.createElement(TwoTierHeadline, _extends({}, primaryHeadline, {
+            slotId: "primaryHeadline"
+          }), " ")), /*#__PURE__*/React.createElement("div", {
+            className: "max-w-2xl"
+          }, /*#__PURE__*/React.createElement(DefaultDescription, _extends({}, primaryDescription, {
+            slotId: "primaryDescription"
+          }), " "))), /*#__PURE__*/React.createElement("div", {
+            className: "w-full"
+          }, /*#__PURE__*/React.createElement(DesignServiceCategoriesGrid, _extends({}, categoriesCardList, {
+            slotId: "categoriesCardList"
+          }), " "))));
+        }
+        ;
+        function ImageBackground({
+          slotId,
+          imageUrl = 'https://img.js.design/assets/img/68463fc6d3edcee12aed1c80.png'
+        }) {
+          return /*#__PURE__*/React.createElement("div", {
+            "data-slot-type": "ImageBackground",
+            className: "size-full bg-cover bg-center"
+          }, /*#__PURE__*/React.createElement(EditableImg, {
+            propKey: `${slotId}_imageUrl`,
+            src: imageUrl,
+            className: "size-full object-cover"
+          }));
+        }
+        function TwoTierHeadline({
+          slotId,
+          primaryText = "Designer specializing in",
+          secondaryText = "Brand + Digital Design"
+        }) {
+          return /*#__PURE__*/React.createElement("h2", {
+            className: "text-[28px] md:text-[40px] lg:text-[40px] font-light flex flex-col leading-[1.2] tracking-tight",
+            "data-slot-type": "PrimaryHeadline"
+          }, /*#__PURE__*/React.createElement(EditableText, {
+            propKey: `${slotId}_primaryText`,
+            className: "leading-normal font-medium text-gray-950"
+          }, primaryText), /*#__PURE__*/React.createElement(EditableText, {
+            propKey: `${slotId}_secondaryText`,
+            className: "font-medium text-gray-400"
+          }, secondaryText));
+        }
+        function DefaultDescription({
+          slotId,
+          text = 'Hello'
+        }) {
+          return /*#__PURE__*/React.createElement(EditableText, {
+            "data-slot-type": "PrimaryDescription",
+            className: `text-sm font-normal md:text-base text-surface-500`,
+            propKey: `${slotId}_text`
+          }, text);
+        }
+        ;
+        function DesignServiceCategoriesGrid({
+          slotId,
+          list = [{
+            title: 'Website Design',
+            primaryImage: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=2669&auto=format&fit=crop',
+            secondaryImage: 'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=2670&auto=format&fit=crop'
+          }, {
+            title: 'Mobile App Design',
+            primaryImage: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2670&auto=format&fit=crop',
+            secondaryImage: 'https://images.unsplash.com/photo-1526498460520-4c246339dccb?q=80&w=2670&auto=format&fit=crop'
+          }, {
+            title: 'Framer and Webflow Development (No-Code)',
+            primaryImage: 'https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=2672&auto=format&fit=crop',
+            secondaryImage: 'https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2664&auto=format&fit=crop'
+          }, {
+            title: 'Social Media Graphics',
+            primaryImage: 'https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=2674&auto=format&fit=crop',
+            secondaryImage: 'https://images.unsplash.com/photo-1562577309-4932fdd64cd1?q=80&w=2674&auto=format&fit=crop'
+          }, {
+            title: 'Pitch Decks',
+            primaryImage: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2670&auto=format&fit=crop',
+            secondaryImage: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=2674&auto=format&fit=crop'
+          }, {
+            title: 'Branding',
+            primaryImage: 'https://images.unsplash.com/photo-1636633762833-5d1658f1e29b?q=80&w=2664&auto=format&fit=crop',
+            secondaryImage: 'https://images.unsplash.com/photo-1520333789090-1afc82db536a?q=80&w=2671&auto=format&fit=crop'
+          }, {
+            title: 'Business Cards',
+            primaryImage: 'https://images.unsplash.com/photo-1589041127168-9b1915731dc6?q=80&w=2670&auto=format&fit=crop',
+            secondaryImage: 'https://images.unsplash.com/photo-1634128222187-18eababc763d?q=80&w=2670&auto=format&fit=crop'
+          }, {
+            title: 'Packaging',
+            primaryImage: 'https://images.unsplash.com/photo-1605640840605-14ac1855827b?q=80&w=2670&auto=format&fit=crop',
+            secondaryImage: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=2670&auto=format&fit=crop'
+          }]
+        }) {
+          return /*#__PURE__*/React.createElement("div", {
+            className: "grid grid-cols-[repeat(auto-fit,18rem)] gap-4 w-full justify-center",
+            "data-slot-type": "CategoriesCardList"
+          }, list.map((category, index) => /*#__PURE__*/React.createElement(motion.div, {
+            key: index,
+            initial: {
+              opacity: 0,
+              y: 20
+            },
+            whileInView: {
+              opacity: 1,
+              y: 0
+            },
+            transition: {
+              duration: 0.5,
+              delay: index * 0.1
+            },
+            viewport: {
+              once: true
+            },
+            className: "flex-1"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "relative flex flex-col items-center justify-center p-6 rounded-3xl bg-surface-50 transition-all duration-300 group"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "mb-10 relative w-28 h-16"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "group/primary relative"
+          }, /*#__PURE__*/React.createElement(EditableImg, {
+            src: category.primaryImage,
+            alt: `${category.title} primary`,
+            className: "w-20 h-16 border-white border-2 object-cover rounded-xl shadow-md top-0 left-0 transform -rotate-12 z-10 transition-all duration-300 hover:-translate-y-2 hover:z-50 hover:shadow-xl cursor-pointer",
+            propKey: `${slotId}_list_${index}_primaryImage`,
+            style: {
+              position: 'absolute'
+            }
+          }), /*#__PURE__*/React.createElement("div", {
+            className: "absolute -top-56 left-1/2 w-80 bg-white rounded-3xl shadow-2xl p-1 opacity-0 group-hover/primary:opacity-100 transition-all duration-300 z-50 pointer-events-none group-hover/primary:pointer-events-auto transform -translate-x-1/2 translate-y-4 group-hover/primary:translate-y-0"
+          }, /*#__PURE__*/React.createElement(EditableImg, {
+            src: category.primaryImage,
+            alt: `${category.title} primary large`,
+            className: "w-full h-48 object-cover rounded-3xl",
+            propKey: `${slotId}_list_${index}_primaryImage`
+          }))), /*#__PURE__*/React.createElement("div", {
+            className: "group/secondary relative"
+          }, /*#__PURE__*/React.createElement(EditableImg, {
+            src: category.secondaryImage,
+            alt: `${category.title} secondary`,
+            className: "w-20 h-16 border-white border-2 object-cover rounded-xl shadow-md top-2 right-0 transform rotate-12 z-20 transition-all duration-300 hover:-translate-y-2 hover:z-50 hover:shadow-xl cursor-pointer",
+            propKey: `${slotId}_list_${index}_secondaryImage`,
+            style: {
+              position: 'absolute'
+            }
+          }), /*#__PURE__*/React.createElement("div", {
+            className: "absolute -top-56 left-1/2 w-80 bg-white rounded-3xl shadow-2xl p-1 opacity-0 group-hover/secondary:opacity-100 transition-all duration-300 z-50 pointer-events-none group-hover/secondary:pointer-events-auto transform -translate-x-1/2 translate-y-4 group-hover/secondary:translate-y-0"
+          }, /*#__PURE__*/React.createElement(EditableImg, {
+            src: category.secondaryImage,
+            alt: `${category.title} secondary large`,
+            className: "w-full h-48 object-cover rounded-3xl",
+            propKey: `${slotId}_list_${index}_secondaryImage`
+          })))), /*#__PURE__*/React.createElement("div", {
+            className: "text-center"
+          }, /*#__PURE__*/React.createElement(EditableText, {
+            className: "text-base font-medium text-surface-950 leading-tight truncate max-w-[200px]",
+            propKey: `${slotId}_list_${index}_title`
+          }, category.title))))));
+        }
+        list.push( /*#__PURE__*/React.createElement(ErrorBoundary, {
+          key: "-aL3bhnofhju9YBlOUMcF"
+        }, /*#__PURE__*/React.createElement(CategoriesCenteredIconGridText, {
+          "background": {
+            "imageUrl": "https://cdn.wegic.ai/wegic-asset-store/data/image/WM1MZRRYGV57IEB4/origin"
+          },
+          "primaryHeadline": {
+            "primaryText": "Danh sách tài liệu",
+            "secondaryText": "Theo từng chủ đề"
+          },
+          "primaryDescription": {
+            "text": "Trang web cung cấp danh sách các tài liệu học tập chi tiết, bài viết chuyên sâu và phân tích các vấn đề kinh tế - xã hội thực tế. Được phân loại rõ ràng theo từng chủ đề, nội dung mang tính khoa học và hỗ trợ tốt các nhu cầu học tập, nghiên cứu hiện nay."
+          },
+          "categoriesCardList": {
+            "list": [{
+              "title": "link=https%3A%2F%2Fvinuni.edu.vn%2Fvi%2Fnhap-mon-kinh-te-hoc-khai-niem-can-biet-de-xay-dung-nen-tang-vung-chac%2F&linkType=external&target=_blank&text=Kinh%20t%E1%BA%BF%20h%E1%BB%8Dc%20c%C6%A1%20b%E1%BA%A3n",
+              "primaryImage": "https://cdn.wegic.ai/assets/onepage/ai/image/6edf91f3-881d-41cd-a9e0-e8d38d8dafa4.jpg?oldPrompt=A close-up of [an open textbook filled with equations and graphs], illuminated by [soft, natural light], professional full-frame DSLR camera, wide aperture (f/5.6), low ISO (ISO 400), fast shutter speed (1/500s), sharp, crisp textures, pronounced subject-background separation, no lenses in the shot, the main subject must not be out of focus&id=b110d4c5-f343-4b62-ae86-d38e464ad3bc",
+              "secondaryImage": "https://cdn.wegic.ai/assets/onepage/ai/image/8b86834e-7211-4fd4-848b-b9e923a45253.jpg?oldPrompt=A [student studying data on a laptop screen], surrounded by [scattered books and notes], soft, natural daylight, professional full-frame DSLR camera, wide aperture (f/5.6), low ISO (ISO 400), fast shutter speed (1/500s), sharp, crisp textures, pronounced subject-background separation, no lenses in the shot, the main subject must not be out of focus&id=0050c986-071a-4c10-9753-af2d250daecb"
+            }, {
+              "title": "link=https%3A%2F%2Fluatminhkhue.vn%2Fchinh-tri-hoc-la-gi-chuc-nang-va-nhiem-vu-cua-chinh-tri-hoc.aspx&linkType=external&target=_blank&text=Ch%C3%ADnh%20tr%E1%BB%8B%20h%E1%BB%8Dc%20hi%E1%BB%87n%20%C4%91%E1%BA%A1i",
+              "primaryImage": "https://cdn.wegic.ai/assets/onepage/ai/image/84db8998-5664-42dc-bf85-44554566a27f.jpg?oldPrompt=A [modern government building] with [flags waving in the wind], taken during [a sunny day], professional full-frame DSLR camera, wide aperture (f/5.6), low ISO (ISO 400), fast shutter speed (1/500s), sharp, crisp textures, pronounced subject-background separation, no lenses in the shot, the main subject must not be out of focus&id=36330020-2976-4008-b0c1-e8a85f669291",
+              "secondaryImage": "https://cdn.wegic.ai/assets/onepage/ai/image/5209f7dc-6f24-4317-9f86-c44ab9409098.jpg?oldPrompt=A [group of people discussing] at a [round table with documents and laptops], illuminated by [soft overhead lighting], professional full-frame DSLR camera, wide aperture (f/5.6), low ISO (ISO 400), fast shutter speed (1/500s), sharp, crisp textures, pronounced subject-background separation, no lenses in the shot, the main subject must not be out of focus&id=4acd9744-2393-4697-93c2-36f74a6bdfbf"
+            }, {
+              "title": "link=https%3A%2F%2Fluatminhkhue.vn%2Fphan-tich-nhung-van-de-chung-nhat-ve-xa-hoi-hoc.aspx&linkType=external&target=_blank&text=X%C3%A3%20h%E1%BB%99i%20h%E1%BB%8Dc%20th%E1%BB%B1c%20h%C3%A0nh",
+              "primaryImage": "https://cdn.wegic.ai/assets/onepage/ai/image/01faa131-46ad-4e7c-9b12-c3a531e85d7f.jpg?oldPrompt=A [diverse group of students] in a [classroom setting], engaging in [a lively discussion], soft, natural daylight, professional full-frame DSLR camera, wide aperture (f/5.6), low ISO (ISO 400), fast shutter speed (1/500s), sharp, crisp textures, pronounced subject-background separation, no lenses in the shot, the main subject must not be out of focus&id=5d1406ee-b8a4-4b1d-b092-aaf95b1bfaf0",
+              "secondaryImage": "https://cdn.wegic.ai/assets/onepage/ai/image/25ea8cdb-537b-46e2-aadc-262084a45ac6.jpg?oldPrompt=A [vibrant community garden] with [people tending to plants], taken on [a sunny afternoon], professional full-frame DSLR camera, wide aperture (f/5.6), low ISO (ISO 400), fast shutter speed (1/500s), sharp, crisp textures, pronounced subject-background separation, no lenses in the shot, the main subject must not be out of focus&id=d9f6f931-79a9-4541-88e1-d00d178242c5"
+            }, {
+              "title": "link=https%3A%2F%2Fthuvienphapluat.vn%2Fhoi-dap-phap-luat%2Fkinh-te-xa-hoi-la-gi-muc-tieu-tong-quat-ve-ke-hoach-phat-trien-kinh-te-xa-hoi-nam-2024-la-gi-138018887.html&linkType=external&target=_blank&text=Ph%C3%A2n%20t%C3%ADch%20kinh%20t%E1%BA%BF%20-%20x%C3%A3%20h%E1%BB%99i",
+              "primaryImage": "https://cdn.wegic.ai/assets/onepage/ai/image/8955127e-fb2b-4ed0-b166-e3104b05e54a.jpg?oldPrompt=A [businessman analyzing graphs] on [a large screen], taken in [a modern office setting], professional full-frame DSLR camera, wide aperture (f/5.6), low ISO (ISO 400), fast shutter speed (1/500s), sharp, crisp textures, pronounced subject-background separation, no lenses in the shot, the main subject must not be out of focus&id=d1ae1d01-f0c7-42ad-b159-011625c332b0",
+              "secondaryImage": "https://cdn.wegic.ai/assets/onepage/ai/image/38c412f4-a5ea-4133-a202-15059f1289c8.jpg?oldPrompt=A [collection of statistical charts and graphs] displayed on [a computer monitor], illuminated by [soft, diffused light], professional full-frame DSLR camera, wide aperture (f/5.6), low ISO (ISO 400), fast shutter speed (1/500s), sharp, crisp textures, pronounced subject-background separation, no lenses in the shot, the main subject must not be out of focus&id=d79d6e0c-e5e4-446a-9dea-130c5805190b"
+            }, {
+              "title": "link=https%3A%2F%2Ftinhdoan.laichau.gov.vn%2Fhoat-dong%2Fdoan-hoi-doi-khap-noi%2Fbai-1-chu-nghia-mac-lenin-tu-tuong-ho-chi-minh-nen-tang-tu-t.html&linkType=external&target=_blank&text=C%C3%A1c%20l%C3%BD%20lu%E1%BA%ADn%20M%C3%A1c-L%C3%AAnin",
+              "primaryImage": "https://cdn.wegic.ai/assets/onepage/ai/image/0f8e60aa-c48c-4f0d-bc53-91de1dea4a39.jpg?oldPrompt=A [statue of Lenin] in [a public square], with [people walking by], photographed on [an overcast day], professional full-frame DSLR camera, wide aperture (f/5.6), low ISO (ISO 400), fast shutter speed (1/500s), sharp, crisp textures, pronounced subject-background separation, no lenses in the shot, the main subject must not be out of focus&id=b356305a-9fb9-4fb2-ae64-fc8854ba1c8a",
+              "secondaryImage": "https://cdn.wegic.ai/assets/onepage/ai/image/220a6d72-ea74-4745-abfa-9c7d037f1c8f.jpg?oldPrompt=A [historical archive room] filled with [old books and documents], illuminated by [soft, warm light], professional full-frame DSLR camera, wide aperture (f/5.6), low ISO (ISO 400), fast shutter speed (1/500s), sharp, crisp textures, pronounced subject-background separation, no lenses in the shot, the main subject must not be out of focus&id=327e7ef3-68c3-4a36-b88f-8bb43213c88f"
+            }, {
+              "title": "link=https%3A%2F%2Ftuyensinh.vnua.edu.vn%2Fnganh-quan-ly-kinh-te%2F&linkType=external&target=_blank&text=Qu%E1%BA%A3n%20l%C3%BD%20kinh%20t%E1%BA%BF",
+              "primaryImage": "https://cdn.wegic.ai/assets/onepage/ai/image/a2df507f-6ab2-4bb6-93d0-e555e2e92725.jpg?oldPrompt=A [manager in a suit] pointing at [a financial graph] on [a whiteboard], taken in [a corporate office], professional full-frame DSLR camera, wide aperture (f/5.6), low ISO (ISO 400), fast shutter speed (1/500s), sharp, crisp textures, pronounced subject-background separation, no lenses in the shot, the main subject must not be out of focus&id=820c2d5e-1f5d-49a8-a33d-e9f370375f21",
+              "secondaryImage": "https://cdn.wegic.ai/assets/onepage/ai/image/abcf40d0-e098-4f6a-97ac-e4f64c9cf8f4.jpg?oldPrompt=A [modern office building] with [glass windows] reflecting [the city skyline], photographed on [a clear day], professional full-frame DSLR camera, wide aperture (f/5.6), low ISO (ISO 400), fast shutter speed (1/500s), sharp, crisp textures, pronounced subject-background separation, no lenses in the shot, the main subject must not be out of focus&id=fb6f4d66-51c2-424f-9fe5-c91db4d87c7d"
+            }, {
+              "title": "link=https%3A%2F%2Fvnexpress.net%2Fphat-trien-ben-vung-4809628.html&linkType=external&target=_blank&text=Ph%C3%A1t%20tri%E1%BB%83n%20b%E1%BB%81n%20v%E1%BB%AFng",
+              "primaryImage": "https://cdn.wegic.ai/assets/onepage/ai/image/0cffb566-7280-4bcf-af8b-baada700adc7.jpg?oldPrompt=A [wind turbine farm] in [a green field], with [a clear blue sky] in the background, photographed on [a sunny day], professional full-frame DSLR camera, wide aperture (f/5.6), low ISO (ISO 400), fast shutter speed (1/500s), sharp, crisp textures, pronounced subject-background separation, no lenses in the shot, the main subject must not be out of focus&id=7f92d4dd-ac14-4068-ae69-b5811193e222",
+              "secondaryImage": "https://cdn.wegic.ai/assets/onepage/ai/image/32a79fa1-989b-443b-9e6e-ca79a543ded2.jpg?oldPrompt=A [lush green forest] with [sunlight filtering through the trees], creating [a peaceful atmosphere], professional full-frame DSLR camera, wide aperture (f/5.6), low ISO (ISO 400), fast shutter speed (1/500s), sharp, crisp textures, pronounced subject-background separation, no lenses in the shot, the main subject must not be out of focus&id=db029b34-f5b1-4f2e-a234-2291af2e3079"
+            }, {
+              "title": "link=https%3A%2F%2Fnghiencuubiendong.vn%2Fnghien-cuu-quoc-te.959.snews&linkType=external&target=_blank&text=Nghi%C3%AAn%20c%E1%BB%A9u%20qu%E1%BB%91c%20t%E1%BA%BF",
+              "primaryImage": "https://cdn.wegic.ai/assets/onepage/ai/image/d6569d40-b97e-484f-8058-1785f8507413.jpg?oldPrompt=A [world map] with [glowing lines] connecting [different countries], taken in [a dark room], professional full-frame DSLR camera, wide aperture (f/5.6), low ISO (ISO 400), fast shutter speed (1/500s), sharp, crisp textures, pronounced subject-background separation, no lenses in the shot, the main subject must not be out of focus&id=a2b4d76c-149b-4dde-b6bc-7d231829aed1",
+              "secondaryImage": "https://cdn.wegic.ai/assets/onepage/ai/image/37448285-eac8-403f-be83-f794e812bd9d.jpg?oldPrompt=A [group of diplomats] shaking hands at [an international conference], with [flags of different nations] in the background, professional full-frame DSLR camera, wide aperture (f/5.6), low ISO (ISO 400), fast shutter speed (1/500s), sharp, crisp textures, pronounced subject-background separation, no lenses in the shot, the main subject must not be out of focus&id=084c3b97-cc3c-45c5-81bc-2b12e5af992b"
+            }]
+          },
+          key: "-aL3bhnofhju9YBlOUMcF"
+        })));
+      } catch (error) {}
+    }
+    {
+      function _extends() {
+        _extends = Object.assign ? Object.assign.bind() : function (target) {
+          for (var i = 1; i < arguments.length; i++) {
+            var source = arguments[i];
+            for (var key in source) {
+              if (Object.prototype.hasOwnProperty.call(source, key)) {
+                target[key] = source[key];
+              }
+            }
+          }
+          return target;
+        };
+        return _extends.apply(this, arguments);
+      }
+      try {
+        function FeatureStackedImageGallery({
+          primaryHeadline,
+          secondaryDescription,
+          imageFirst,
+          secondaryHeadlineFirst,
+          secondaryDescriptionFirst,
+          imageSecond,
+          secondaryHeadlineSecond,
+          secondaryDescriptionSecond,
+          imageThird,
+          secondaryHeadlineThird,
+          secondaryDescriptionThird,
+          imageFourth,
+          secondaryHeadlineFourth,
+          secondaryDescriptionFourth,
+          primaryButton
+        }) {
+          return /*#__PURE__*/React.createElement("div", {
+            className: "flex flex-col justify-center items-center gap-12 md:gap-16 lg:gap-20 px-6 md:px-12 lg:px-20 w-full pt-20 pb-16 md:pt-32 md:pb-20 lg:pt-36 lg:pb-20",
+            "data-id": "uDYp6l9hsavtpMpGiVPoN"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "flex max-w-7xl flex-col items-start gap-20"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "flex max-w-2xl flex-col justify-center items-center gap-5 self-stretch"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "flex max-w-2xl items-center gap-2 self-stretch"
+          }, /*#__PURE__*/React.createElement(LargeAndBoldBlackText, _extends({}, primaryHeadline, {
+            slotId: "primaryHeadline"
+          }), " ")), /*#__PURE__*/React.createElement("div", {
+            className: "flex max-w-2xl justify-start items-center gap-2 self-stretch"
+          }, /*#__PURE__*/React.createElement(RegularDescription, _extends({}, secondaryDescription, {
+            slotId: "secondaryDescription"
+          }), " "))), /*#__PURE__*/React.createElement("div", {
+            className: "lg:flex lg:items-center lg:gap-2 lg:self-stretch"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "flex flex-col items-center gap-20 self-stretch lg:self-auto lg:flex-[1_0_0]"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "flex flex-col items-start gap-20 self-stretch"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "flex max-w-7xl flex-col items-start gap-10 self-stretch lg:flex-row lg:justify-between lg:gap-16"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "flex max-w-3xl p-0 flex-col items-center gap-6 self-stretch lg:max-w-md lg:self-auto lg:flex-[1_0_0]"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "flex justify-center items-center self-stretch rounded-3xl overflow-hidden [&>img]:object-cover [&>img]:size-full aspect-[342/256.5] md:aspect-[4/3]"
+          }, /*#__PURE__*/React.createElement(BasicImage, _extends({}, imageFirst, {
+            slotId: "imageFirst"
+          }), " ")), /*#__PURE__*/React.createElement("div", {
+            className: "flex flex-col items-start gap-3 self-stretch"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "flex items-center gap-2 self-stretch"
+          }, /*#__PURE__*/React.createElement(MediumAndBoldBlackText, _extends({}, secondaryHeadlineFirst, {
+            slotId: "secondaryHeadlineFirst"
+          }), " ")), /*#__PURE__*/React.createElement("div", {
+            className: "flex items-center gap-2 self-stretch"
+          }, /*#__PURE__*/React.createElement(RegularDescription, _extends({}, secondaryDescriptionFirst, {
+            slotId: "secondaryDescriptionFirst"
+          }), " ")))), /*#__PURE__*/React.createElement("div", {
+            className: "flex max-w-3xl p-0 flex-col items-center gap-6 self-stretch lg:self-auto lg:flex-[1_0_0]"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "flex justify-center items-center self-stretch rounded-3xl overflow-hidden [&>img]:object-cover [&>img]:size-full aspect-[342/256.5] md:aspect-[4/3]"
+          }, /*#__PURE__*/React.createElement(BasicImage, _extends({}, imageSecond, {
+            slotId: "imageSecond"
+          }), " ")), /*#__PURE__*/React.createElement("div", {
+            className: "flex flex-col items-start gap-3 self-stretch"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "flex items-center gap-2 self-stretch"
+          }, /*#__PURE__*/React.createElement(MediumAndBoldBlackText, _extends({}, secondaryHeadlineSecond, {
+            slotId: "secondaryHeadlineSecond"
+          }), " ")), /*#__PURE__*/React.createElement("div", {
+            className: "flex items-center gap-2 self-stretch"
+          }, /*#__PURE__*/React.createElement(RegularDescription, _extends({}, secondaryDescriptionSecond, {
+            slotId: "secondaryDescriptionSecond"
+          }), " "))))), /*#__PURE__*/React.createElement("div", {
+            className: "flex max-w-7xl flex-col items-start gap-10 self-stretch lg:flex-row lg:justify-between lg:gap-16"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "flex max-w-3xl p-0 flex-col items-center gap-6 self-stretch lg:self-auto lg:flex-[1_0_0]"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "flex justify-center items-center self-stretch rounded-3xl overflow-hidden [&>img]:object-cover [&>img]:size-full aspect-[342/256.5] md:aspect-[4/3]"
+          }, /*#__PURE__*/React.createElement(BasicImage, _extends({}, imageThird, {
+            slotId: "imageThird"
+          }), " ")), /*#__PURE__*/React.createElement("div", {
+            className: "flex flex-col items-start gap-3 self-stretch"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "flex items-center gap-2 self-stretch"
+          }, /*#__PURE__*/React.createElement(MediumAndBoldBlackText, _extends({}, secondaryHeadlineThird, {
+            slotId: "secondaryHeadlineThird"
+          }), " ")), /*#__PURE__*/React.createElement("div", {
+            className: "flex items-center gap-2 self-stretch"
+          }, /*#__PURE__*/React.createElement(RegularDescription, _extends({}, secondaryDescriptionThird, {
+            slotId: "secondaryDescriptionThird"
+          }), " ")))), /*#__PURE__*/React.createElement("div", {
+            className: "flex max-w-3xl p-0 flex-col items-center gap-6 self-stretch lg:max-w-md lg:self-auto lg:flex-[1_0_0]"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "flex justify-center items-center self-stretch rounded-3xl overflow-hidden [&>img]:object-cover [&>img]:size-full aspect-[342/256.5] md:aspect-[4/3]"
+          }, /*#__PURE__*/React.createElement(BasicImage, _extends({}, imageFourth, {
+            slotId: "imageFourth"
+          }), " ")), /*#__PURE__*/React.createElement("div", {
+            className: "flex flex-col items-start gap-3 self-stretch"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "flex items-center gap-2 self-stretch"
+          }, /*#__PURE__*/React.createElement(MediumAndBoldBlackText, _extends({}, secondaryHeadlineFourth, {
+            slotId: "secondaryHeadlineFourth"
+          }), " ")), /*#__PURE__*/React.createElement("div", {
+            className: "flex items-center gap-2 self-stretch"
+          }, /*#__PURE__*/React.createElement(RegularDescription, _extends({}, secondaryDescriptionFourth, {
+            slotId: "secondaryDescriptionFourth"
+          }), " ")))))), /*#__PURE__*/React.createElement("div", {
+            className: "flex flex-col justify-center items-center gap-2 self-stretch"
+          }, /*#__PURE__*/React.createElement(DarkRainbowButton, _extends({}, primaryButton, {
+            slotId: "primaryButton"
+          }), " "))))));
+        }
+        ;
+        function LargeAndBoldBlackText({
+          text = 'Hello',
+          slotId = 'LargeAndBoldBlackText',
+          fontWeight = '600'
+        }) {
+          return /*#__PURE__*/React.createElement("h2", {
+            "data-slot-type": "PrimaryHeadline"
+          }, /*#__PURE__*/React.createElement(EditableText, {
+            style: {
+              fontWeight
+            },
+            className: "leading-[128%] tracking-tight md:text-[40px] text-[28px] text-surface-950",
+            propKey: `${slotId}_text`
+          }, text));
+        }
+        ;
+        function RegularDescription({
+          text = 'Hello',
+          slotId = 'RegularDescription'
+        }) {
+          return /*#__PURE__*/React.createElement(EditableText, {
+            "data-slot-type": "SecondaryDescription",
+            className: "font-normal md:text-base text-sm text-surface-500",
+            propKey: `${slotId}_text`
+          }, text);
+        }
+        ;
+        function BasicImage({
+          slotId,
+          image = 'https://images.unsplash.com/photo-1749330513873-09ffa91b0aae?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0'
+        }) {
+          return /*#__PURE__*/React.createElement(EditableImg, {
+            className: "w-full h-full object-cover",
+            src: image,
+            propKey: `${slotId}_image`,
+            "data-slot-type": "Image"
+          });
+        }
+        function MediumAndBoldBlackText({
+          text = 'Hello',
+          slotId = 'MediumAndBoldBlackText'
+        }) {
+          return /*#__PURE__*/React.createElement(EditableText, {
+            "data-slot-type": "SecondaryHeadline",
+            className: "font-bold text-2xl/[128%] text-surface-950 text-[1.25rem] md:text-[1.5rem]",
+            propKey: `${slotId}_text`
+          }, text);
+        }
+        ;
+        function DarkRainbowButton({
+          slotId,
+          textAttr = 'Primary Button'
+        }) {
+          return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("style", null, `
+            @keyframes rainbow {
+              0% {
+                background-position: 0%;
+              }
+              100% {
+                background-position: 200%;
+              }
+            }
+            .animateRainbow {
+              animation: rainbow 2s linear infinite;
+            }
+            .rainbow-btn::before {
+              content: '';
+              position: absolute;
+              bottom: -20%;
+              left: 50%;
+              z-index: 0;
+              height: 20%;
+              width: 60%;
+              transform: translateX(-50%);
+              animation: rainbow 2s linear infinite;
+              filter: blur(calc(0.8*1rem));
+              background: linear-gradient(90deg,hsl(0,100%,63%),hsl(90,100%,63%),hsl(210,100%,63%),hsl(195,100%,63%),hsl(270,100%,63%));
+              background-size: 200%;
+            }
+        `), /*#__PURE__*/React.createElement(EditableButton, {
+            "data-slot-type": "PrimaryButton",
+            className: "group animateRainbow rainbow-btn inline-flex items-center justify-center gap-2 relative px-6 py-2 h-12 rounded-2xl cursor-pointer bg-[length:200%] border-0 transition-colors [background-clip:padding-box,border-box,border-box] [background-origin:border-box] [border:calc(0.08*1rem)_solid_transparent] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 active:scale-95 transition-transform duration-150 bg-[linear-gradient(#121213,#121213),linear-gradient(#121213_50%,rgba(18,18,19,0.6)_80%,rgba(18,18,19,0)),linear-gradient(90deg,hsl(0,100%,63%),hsl(90,100%,63%),hsl(210,100%,63%),hsl(195,100%,63%),hsl(270,100%,63%))]"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "relative overflow-hidden h-6 z-10"
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "flex flex-col items-center transition-transform duration-300 ease-in-out group-hover:-translate-y-6"
+          }, /*#__PURE__*/React.createElement(EditableText, {
+            propKey: `${slotId}_textAttr`,
+            className: "font-medium text-base text-white whitespace-nowrap h-6 flex items-center relative z-10"
+          }, textAttr), /*#__PURE__*/React.createElement(EditableText, {
+            propKey: `${slotId}_textAttr`,
+            className: "font-medium text-base text-white whitespace-nowrap h-6 flex items-center relative z-10"
+          }, textAttr)))));
+        }
+        ;
+        list.push( /*#__PURE__*/React.createElement(ErrorBoundary, {
+          key: "uDYp6l9hsavtpMpGiVPoN"
+        }, /*#__PURE__*/React.createElement(FeatureStackedImageGallery, {
+          "primaryHeadline": {
+            "text": "Tài liệu nổi bật",
+            "fontWeight": "bold"
+          },
+          "secondaryDescription": {
+            "text": "Khám phá các tài liệu học tập và bài viết chuyên sâu được tuyển chọn kỹ lưỡng, phù hợp với mọi nhu cầu nghiên cứu và học tập."
+          },
+          "imageFirst": {
+            "image": "https://cdn.wegic.ai/assets/onepage/ai/image/066418c6-42fd-4379-8e03-828f3469806b.jpg?oldPrompt=A collection of macroeconomics study materials, with open books, graphs, and charts neatly displayed on a desk in a quiet study environment, ideal for research and learning, professional full-frame DSLR camera, soft natural daylight, rich and vibrant details&id=708aeb2c-1f19-403b-b79d-ef745cc9bed6"
+          },
+          "secondaryHeadlineFirst": {
+            "text": "link=https%3A%2F%2Fly-luan-mac-lenin-nnjxzkg.gamma.site%2F&linkType=external&target=_blank&text=T%E1%BA%ADp%20trung%20v%C3%A0o%20%C3%A1p%20d%E1%BB%A5ng%20l%C3%BD%20lu%E1%BA%ADn%20M%C3%A1c-L%C3%AAnin%20%C4%91%E1%BB%83%20ph%C3%A2n%20t%C3%ADch%20c%C3%A1c%20v%E1%BA%A5n%20%C4%91%E1%BB%81%20kinh%20t%E1%BA%BF%20-%20x%C3%A3%20h%E1%BB%99i%20c%E1%BB%A7a%20Vi%E1%BB%87t%20Nam%20hi%E1%BB%87n%20nay"
+          },
+          "secondaryDescriptionFirst": {
+            "text": "text=Ph%C3%A2n%20t%C3%ADch%20B%E1%BA%A5t%20b%C3%ACnh%20%C4%91%E1%BA%B3ng%20thu%20nh%E1%BA%ADp%2C%20%C4%90%C3%A1nh%20gi%C3%A1%20vai%20tr%C3%B2%20kinh%20t%E1%BA%BF%20nh%C3%A0%20n%C6%B0%E1%BB%9Bc%20trong%20b%E1%BB%91i%20c%E1%BA%A3nh%20to%C3%A0n%20c%E1%BA%A7u%20h%C3%B3a%2C%20Ph%C3%A2n%20t%C3%ADch%20t%C3%ADnh%20ch%E1%BA%A5t%20c%E1%BB%A7a%20%C4%91%E1%BA%A5t%20%C4%91ai%20v%C3%A0%20ru%E1%BB%99ng%20%C4%91%E1%BA%A5t%20theo%20quan%20%C4%91i%E1%BB%83m%20M%C3%A1c-L%C3%AAnin."
+          },
+          "imageSecond": {
+            "image": "https://cdn.wegic.ai/assets/onepage/ai/image/c0a87ba5-5024-4dbb-a934-6e1e36330010.jpg?oldPrompt=An analysis setting for public policy, featuring documents with written diagrams, laptops, and government-related charts, placed in a modern office desk setup, natural lighting with focused clarity, professional photography style&id=f2276a85-1f7b-4546-bf05-4f4041eb4e6d"
+          },
+          "secondaryHeadlineSecond": {
+            "text": "link=https%3A%2F%2Fchinhsach.vn%2Fphan-tich-chinh-sach-cong%2F&linkType=external&target=_blank&text=Ph%C3%A2n%20t%C3%ADch%20ch%C3%ADnh%20s%C3%A1ch%20c%C3%B4ng"
+          },
+          "secondaryDescriptionSecond": {
+            "text": "Đánh giá tác động xã hội."
+          },
+          "imageThird": {
+            "image": "https://cdn.wegic.ai/assets/onepage/ai/image/789de90b-5dcf-45df-a058-44bdcfa443e1.jpg?oldPrompt=A collection of study materials and books on Marxist theory, featuring classic texts, notebooks, and pens, arranged neatly on a wooden table in a warm academic library setting, soft focused lighting, professional DSLR clarity&id=be4629af-ba1a-4e16-adca-5f3e1ba5c373"
+          },
+          "secondaryHeadlineThird": {
+            "text": "link=https%3A%2F%2Flyluanchinhtri.vn%2Fgia-tri-ben-vung-va-y-nghia-thoi-dai-cua-chu-nghia-mac-lenin-387.html&linkType=external&target=_blank&text=L%C3%BD%20lu%E1%BA%ADn%20M%C3%A1c-L%C3%AAnin%20hi%E1%BB%87n%20%C4%91%E1%BA%A1i"
+          },
+          "secondaryDescriptionThird": {
+            "text": "Các ứng dụng trong thời đại mới."
+          },
+          "imageFourth": {
+            "image": "https://cdn.wegic.ai/assets/onepage/ai/image/6707bc7e-8daf-4250-9945-11651b92352e.jpg?oldPrompt=A modern depiction of social issues, with symbolic images like hands-on community projects, posters discussing societal challenges, and a diverse group collaboration setting, shot in a brightly lit conference room, sharp details, and professional lighting&id=f9e8213d-960c-4b60-b98b-4a7806ad9eec"
+          },
+          "secondaryHeadlineFourth": {
+            "text": "link=https%3A%2F%2Ftiasang.com.vn%2Fkhoa-hoc-cong-nghe%2Fnhung-van-de-cua-xa-hoi-duong-dai-can-duoc-tra-loi-20749%2F&linkType=external&target=_blank&text=V%E1%BA%A5n%20%C4%91%E1%BB%81%20x%C3%A3%20h%E1%BB%99i%20%C4%91%C6%B0%C6%A1ng%20%C4%91%E1%BA%A1i"
+          },
+          "secondaryDescriptionFourth": {
+            "text": "Phân tích và giải pháp."
+          },
+          "primaryButton": {
+            "textAttr": "Xem thêm"
+          },
+          key: "uDYp6l9hsavtpMpGiVPoN"
+        })));
+      } catch (error) {}
+    }
+    {}
+    routerList.push({
+      path: "study-materials",
+      element: /*#__PURE__*/React.createElement(Layout, null, list)
+    });
+  }
+  function _extends() {
+    _extends = Object.assign ? Object.assign.bind() : function (target) {
+      for (var i = 1; i < arguments.length; i++) {
+        var source = arguments[i];
+        for (var key in source) {
+          if (Object.prototype.hasOwnProperty.call(source, key)) {
+            target[key] = source[key];
+          }
+        }
+      }
+      return target;
+    };
+    return _extends.apply(this, arguments);
+  }
+  try {
+    function FooterMultiColumnDarkSocial({
+      footerList,
+      footerDescription,
+      iconFirst,
+      iconSecond,
+      iconThird,
+      footerDivider,
+      footerBottomModule
+    }) {
+      return /*#__PURE__*/React.createElement("div", {
+        className: "flex flex-col items-center justify-center w-full bg-black py-20 px-6 md:py-32 md:px-12 lg:py-36 lg:px-20",
+        "data-id": "7cPq0p2KtdM8onth8_z_I"
+      }, /*#__PURE__*/React.createElement("div", {
+        className: "max-w-7xl w-full flex flex-col gap-20"
+      }, /*#__PURE__*/React.createElement("div", {
+        className: "flex flex-col items-center justify-center gap-20 lg:flex-row lg:items-start lg:justify-between"
+      }, /*#__PURE__*/React.createElement(OnlyTextList, _extends({}, footerList, {
+        slotId: "footerList"
+      }), " "), /*#__PURE__*/React.createElement("div", {
+        className: "flex flex-col lg:items-start items-center gap-7"
+      }, /*#__PURE__*/React.createElement(FooterRegularDescription, _extends({}, footerDescription, {
+        slotId: "footerDescription"
+      }), " "), /*#__PURE__*/React.createElement("div", {
+        className: "flex flex-row items-center gap-6 text-white text-2xl [&>div]:!size-6"
+      }, /*#__PURE__*/React.createElement(BasicIcon, _extends({}, iconFirst, {
+        slotId: "iconFirst"
+      }), " "), /*#__PURE__*/React.createElement(BasicIcon, _extends({}, iconSecond, {
+        slotId: "iconSecond"
+      }), " "), /*#__PURE__*/React.createElement(BasicIcon, _extends({}, iconThird, {
+        slotId: "iconThird"
+      }), " ")))), /*#__PURE__*/React.createElement("div", {
+        className: "flex flex-col items-center justify-center gap-6 w-full"
+      }, /*#__PURE__*/React.createElement("div", {
+        className: "flex py-[5px] w-full items-start flex-col"
+      }, /*#__PURE__*/React.createElement(FooterBasicDivider, _extends({}, footerDivider, {
+        slotId: "footerDivider"
+      }), " ")), /*#__PURE__*/React.createElement(FooterBottomDeploymentNameAndTextButton, _extends({}, footerBottomModule, {
+        slotId: "footerBottomModule"
+      }), " "))));
+    }
+    function OnlyTextList({
+      list = [{
+        topicText: 'INDEX',
+        itemList: [{
+          text: 'HOME'
+        }, {
+          text: 'text=WORK&link=#'
+        }, {
+          text: 'text=ABOUT&link=#'
+        }, {
+          text: 'text=JOURNAL&link=#'
+        }]
+      }, {
+        topicText: 'WORK',
+        itemList: [{
+          text: 'text=HOME&link=#'
+        }, {
+          text: 'text=WORK&link=#'
+        }, {
+          text: 'text=ABOUT&link=#'
+        }, {
+          text: 'text=JOURNAL&link=#'
+        }]
+      }, {
+        topicText: 'ABOUT',
+        itemList: [{
+          text: 'text=HOME&link=#'
+        }, {
+          text: 'text=WORK&link=#'
+        }, {
+          text: 'text=ABOUT&link=#'
+        }, {
+          text: 'text=JOURNweqweqeqeAL&link=#'
+        }]
+      }, {
+        topicText: 'JOURNAL',
+        itemList: [{
+          text: 'text=HOME&link=#'
+        }, {
+          text: 'text=WORK&link=#'
+        }, {
+          text: 'text=ABOUT&link=#'
+        }, {
+          text: 'text=JOURNAL2313213213&link=#'
+        }]
+      }],
+      slotId = 'OnlyTextList'
+    }) {
+      return /*#__PURE__*/React.createElement("div", {
+        className: "w-full flex flex-wrap gap-6 md:gap-x-24",
+        "data-slot-type": "FooterList"
+      }, list.map((item, idx) => {
+        return /*#__PURE__*/React.createElement("div", {
+          key: idx,
+          className: "w-full flex flex-col gap-3 max-w-[6.125rem] md:max-w-none md:w-fit"
+        }, /*#__PURE__*/React.createElement(EditableText, {
+          className: "text-surface-500 text-[0.8125rem]/[150%] font-normal not-italic uppercase overflow-hidden whitespace-nowrap text-ellipsis",
+          propKey: `${slotId}_list_${idx}_topicText`
+        }, item.topicText), /*#__PURE__*/React.createElement("div", {
+          className: "w-full flex flex-col gap-1.5"
+        }, item.itemList.map((option, index) => {
+          return /*#__PURE__*/React.createElement(EditableText, {
+            className: "text-white text-sm/[150%] cursor-default overflow-hidden whitespace-nowrap text-ellipsis",
+            key: index,
+            propKey: `${slotId}_list_${idx}_itemList_${index}_text`
+          }, option.text);
+        })));
+      }));
+    }
+    function FooterRegularDescription({
+      text = 'Hello',
+      slotId = 'RegularDescription'
+    }) {
+      return /*#__PURE__*/React.createElement(EditableText, {
+        "data-slot-type": "FooterRegularDescription",
+        className: "font-normal md:text-base text-sm text-white",
+        propKey: `${slotId}_text`
+      }, text);
+    }
+    ;
+    function BasicIcon({
+      slotId,
+      icon = "fa-solid fa-arrow-right"
+    }) {
+      return /*#__PURE__*/React.createElement(EditableIcon, {
+        "data-slot-type": "Icon",
+        propKey: `${slotId}_icon`,
+        className: "!flex !items-center !justify-center",
+        icon: icon
+      });
+    }
+    function FooterBasicDivider({
+      slotId,
+      type = 'solid'
+    }) {
+      return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("style", null, `
+          .dashed {
+            height: 1px;
+            background-image: linear-gradient(
+              to right,
+              rgba(255, 255, 255, 0.15) 0%,
+              rgba(255, 255, 255, 0.15) 33.33%,
+              transparent 33.33%,
+              transparent 100%
+            );
+            background-repeat: repeat-x;
+            background-size: 6px 2px;
+            border-radius: 1px;
+          }
+          .solid {
+            border-style: solid;
+            border-top-width: 1px;
+          }
+          .dotted {
+            height: 1px;
+            background-image: linear-gradient(
+              to right,
+               rgba(255, 255, 255, 0.15) 0%,
+               rgba(255, 255, 255, 0.15) 25%,
+              transparent 25%,
+              transparent 100%
+            );
+            background-repeat: repeat-x;
+            background-size: 5px 1px;
+          }
+        `), /*#__PURE__*/React.createElement("div", {
+        "data-slot-type": "FooterDivider",
+        className: `w-full border-white/15 ${type}`
+      }));
+    }
+    ;
+    function FooterBottomDeploymentNameAndTextButton({
+      deploymentNameText = 'COPYRIGHT © 2025 Wegic Inc. All rights reserved.',
+      textButtonContentList = [{
+        text: 'text=TERMS OF SERVICE&link=#'
+      }, {
+        text: 'text=PRIVACY POLICY&link=#'
+      }],
+      slotId
+    }) {
+      return /*#__PURE__*/React.createElement("div", {
+        className: "flex justify-between md:items-center items-start md:flex-row md:gap-0 gap-10 flex-col w-full",
+        "data-slot-type": "FooterBottomModule"
+      }, /*#__PURE__*/React.createElement(EditableText, {
+        className: "text-white/50 text-[0.8125rem]/[150%] uppercase font-normal",
+        propKey: `${slotId}_deploymentNameText`
+      }, deploymentNameText), /*#__PURE__*/React.createElement("div", {
+        className: "flex flex-row items-center gap-2"
+      }, textButtonContentList.map((options, index) => {
+        return /*#__PURE__*/React.createElement(React.Fragment, null, index !== 0 && /*#__PURE__*/React.createElement("div", {
+          className: "w-px h-[0.8125rem] bg-white/50"
+        }), /*#__PURE__*/React.createElement(EditableText, {
+          className: "text-white/90 text-[0.8125rem]/[150%] cursor-default decoration-solid decoration-skip-ink-auto decoration-auto",
+          propKey: `${slotId}_textButtonContent_${index}_text`
+        }, options.text));
+      })));
+    }
+    ;
+    Footer_1984162465388769282 = /*#__PURE__*/React.createElement(ErrorBoundary, {
+      key: "7cPq0p2KtdM8onth8_z_I"
+    }, /*#__PURE__*/React.createElement(FooterMultiColumnDarkSocial, {
+      "footerList": {
+        "list": [{
+          "topicText": "TÀI LIỆU",
+          "itemList": [{
+            "text": "Kinh tế chính trị"
+          }, {
+            "text": "Triết học Mác-Lênin"
+          }, {
+            "text": "Chủ nghĩa xã hội khoa học"
+          }]
+        }, {
+          "topicText": "VỀ CHÚNG TÔI",
+          "itemList": [{
+            "text": "Giới thiệu"
+          }, {
+            "text": "Liên hệ"
+          }, {
+            "text": "Sự nghiệp"
+          }]
+        }, {
+          "topicText": "HỖ TRỢ",
+          "itemList": [{
+            "text": "Câu hỏi thường gặp"
+          }, {
+            "text": "Chính sách bảo mật"
+          }, {
+            "text": "Điều khoản dịch vụ"
+          }]
+        }]
+      },
+      "footerDescription": {
+        "text": "Cung cấp tài liệu học tập và phân tích chuyên sâu."
+      },
+      "iconFirst": {
+        "icon": "fa-brands fa-facebook"
+      },
+      "iconSecond": {
+        "icon": "fa-brands fa-twitter"
+      },
+      "iconThird": {
+        "icon": "fa-brands fa-linkedin"
+      },
+      "footerDivider": {
+        "type": "solid"
+      },
+      "footerBottomModule": {
+        "deploymentNameText": "BẢN QUYỀN © 2025 Wegic Inc. Bảo lưu mọi quyền.",
+        "textButtonContentList": [{
+          "text": "text=ĐIỀU KHOẢN DỊCH VỤ&link=#"
+        }, {
+          "text": "text=CHÍNH SÁCH BẢO MẬT&link=#"
+        }]
+      },
+      key: "7cPq0p2KtdM8onth8_z_I"
+    }));
+  } catch (error) {}
+  if (defaultRouter && defaultRouter !== "/") {
+    const defaultRouterItem = routerList.find(item => {
+      if (item.path === defaultRouter) {
+        return item;
+      }
+    });
+    routerList.unshift({
+      path: '/',
+      element: defaultRouterItem.element
+    });
+  }
+  const router = createBrowserRouter(routerList);
+  createRoot(document.getElementById('root')).render( /*#__PURE__*/React.createElement(RouterProvider, {
+    router: router
+  }));
+}
+render();
